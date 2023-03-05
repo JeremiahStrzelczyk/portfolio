@@ -1,13 +1,273 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* || VARIABLES */
+:root {
+  /* COLORS */
+  --primary-color: #0cf708;
+  --secondary-color: #affa00;
+  --blend-color: linear-gradient(
+    270deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
+  --dark-color: #161a16;
+  --light-color: whitesmoke;
+  --dark-75: rgba(22, 26, 22, 0.75);
+  --dark-50: rgba(22, 26, 22, 0.5);
+  --dark-25: rgba(22, 26, 22, 0.25);
+  --dark-10: rgba(22, 26, 22, 0.1);
+  --dark-5: rgba(22, 26, 22, 0.05);
+  --error: #fa2f17;
+  --success: #0cf70c;
+
+  /* TYPOGRAPHY */
+  --ff-h: "Roboto, Arial";
+  --ff-p: "Nunito, sans-serif";
+
+  /* Sizes derived from typescale.com using 1.250 as the smallest and 
+     1.414 as the largest scales respectively*/
+  --p: clamp(18px, calc(1.16666 * 1vw), 21px);
+  --h1: clamp(55px, calc(6.61111 * 1vw), 119px);
+  --h2: clamp(44px, calc(4.46666 * 1vw), 84px);
+  --h3: clamp(36px, calc(3.33333 * 1vw), 60px);
+  --h4: clamp(29px, calc(2.33333 * 1vw), 42px);
+  --h5: clamp(23px, calc(1.66666 * 1vw), 30px);
+  --h6: clamp(18px, calc(1.16666 * 1vw), 21px);
+
+  /* PADDING/MARGINS */
+  --px8: calc(0.44444 * 1vw); /* 8px @ 1800 --> 8 / 1800 * 100 = 0.444 */
+  --px16: calc(0.88888 * 1vw); /* 16px @ 1800 --> 16 / 1800 * 100 = 0.888 */
+  --px24: calc(1.33333 * 1vw); /* 24px @ 1800 --> 24 / 1800 * 100 = 1.333 */
+  --px32: calc(1.77777 * 1vw); /* 32px @ 1800 --> 32 / 1800 * 100 = 1.777 */
+  --px48: calc(2.66666 * 1vw); /* 48px @ 1800 --> 48 / 1800 * 100 = 2.666 */
+  --px64: calc(3.55555 * 1vw); /* 64px @ 1800 --> 64 / 1800 * 100 = 3.555 */
+  --px128: calc(7.11111 * 1vw); /* 128px @ 1800 -->  128 / 1800 * 100 = 7.111 */
+  --px256: calc(14.22222 * 1vw);
+  --px384: calc(21.33333 * 1vw); /* Hero section */
+  --px512: calc(28.44444 * 1vw);
+}
+
+/* || GENERAL STYLES */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 32px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-h);
+  font-style: normal;
+
+  color: var(--dark-color);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: var(--h1);
+  line-height: 139px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: var(--h2);
+  line-height: 98px;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: var(--h3);
+  line-height: 70px;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: var(--h4);
+  line-height: 49px;
+}
+
+h5 {
+  font-weight: 700;
+  font-size: var(--h5);
+  line-height: 35px;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: var(--h6);
+  line-height: 25px;
+}
+
+p {
+  font-family: var(--ff-p);
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--p);
+  line-height: 30px;
+  color: var(--dark-75);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block; /* removes gap since images are inline by default */
+  /* Image responsiveness */
+  max-width: 100%; /* of parent */
+  height: auto;
+}
+
+input,
+body,
+textarea {
+  font: inherit;
+}
+
+body {
+  background-color: var(--light-color);
+}
+
+/* || UTILITY CLASSES */
+.blend-bg {
+  background: var(--blend-color);
+}
+
+.blend-text {
+  background: var(--blend-color);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+button {
+  border: none;
+  border-radius: 100px;
+  padding: var(--px24) var(--px48);
+  cursor: pointer;
+}
+
+section {
+  padding: 0px var(--px128);
+  margin: 0px 0px var(--px256) 0px;
+  text-align: center;
+}
+
+/* || ICONS/SVG */
+.icons__skills {
+  height: var(--px64);
+  color: var(--dark-color);
+}
+
+.icons__icon {
+  height: var(--px32);
+  color: var(--dark-color);
+  width: auto;
+}
+
+.icons__logo {
+  color: var(--dark-color);
+  height: var(--px64);
+}
+.icons__icon--inverse {
+  color: var(--light-color);
+}
+
+/* || BUTTONS */
+.button-primary {
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07),
+    0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198),
+    0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275),
+    0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035),
+    0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725),
+    0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+}
+
+.button__wrapper {
+  display: flex;
+  gap: 16px;
+}
+
+/* We set a margin-bottom of 32px as a standard. This is to negate that */
+button h6 {
+  margin-bottom: 0px;
+}
+
+/* || NAVBAR */
+nav {
+  border-bottom: 1px solid rgba(22, 26, 22, 0.1);
+  margin-bottom: var(--px256);
+}
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--px32) var(--px64);
+  align-items: center;
+}
+.nav__links-container {
+  display: flex;
+  gap: var(--px64);
+  align-items: center;
+  justify-content: center;
+}
+
+nav a {
+  font-weight: 700;
+  font-size: var(--h6);
+  line-height: 25px;
+  text-decoration: none;
+  color: var(--dark-color);
+}
+
+footer p {
+  margin-bottom: 0px; /* p has margin by default. Don't want it in footer */
+}
+
+.nav__contact {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  border-top: 1px solid rgba(22, 26, 22, 0.1);
+}
+
+footer p {
+  font-size: 15px;
+}
+
+footer .nav__container {
+  border-bottom: 1px solid rgba(22, 26, 22, 0.075);
+}
+
+/* || HERO */
+.hero {
+  padding: 0px var(--px128); /* 128 section + 128 = 256 total padding */
+}
+
+.hero p {
+  padding: 0px var(--px256); /* Shrinks the abstract to a more pleasing size */
+}
+
+.hero button {
+  margin-top: 96px; /* More separation between button and hero content */
 }
