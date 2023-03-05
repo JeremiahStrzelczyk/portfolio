@@ -8,8 +8,12 @@ import Skills from "./pages/Skills";
 function App() {
   return (
     <>
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
+
       <Navbar />
-      <main>
+      <main id="main-content">
         <Hero />
         <Skills />
         <Projects />

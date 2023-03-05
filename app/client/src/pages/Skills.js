@@ -16,7 +16,7 @@ const Skills = () => {
       <header>
         <h2>Skills</h2>
       </header>
-      <div className="iconContainer">
+      <div className="skills__icon-container">
         <JavaScript />
         <HTML />
         <CSS />

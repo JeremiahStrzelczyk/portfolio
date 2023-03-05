@@ -1,4 +1,5 @@
-import { GitHub, LinkedIn, Logo, StackOverflow } from "./Icons";
+import { GitHub, LinkedIn, StackOverflow } from "./Icons";
+import Logo from "./Logo";
 
 const Navbar = () => {
   return (

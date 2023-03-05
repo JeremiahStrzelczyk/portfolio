@@ -1,38 +1,42 @@
 import Button from "../components/Button";
 
-const Project = ({
-  title,
-  abstract,
-  point1,
-  point2,
-  point3,
-  summary,
-  stack,
-  contributions,
-}) => {
+const Project = ({ data, image }) => {
   return (
     <div>
-      <div className="double-cols">
-        <div className="ProjectImageContainer">Image</div>
-        <div className="ProjectTextContainer">
-          <h3>{title}</h3>
-          <p>{abstract}</p>
+      <div className="project__double-cols">
+        {/* <div className="project__imageContainer"> */}
+        <div className="project__column">
+          <img
+            className="project__img"
+            src={image}
+            width={data.image.width}
+            height={data.image.height}
+            alt={data.image.alt}
+          />
+        </div>
+        {/* <div className="project__textContainer"> */}
+        <div className="project__column">
+          <h3>{data.title}</h3>
+          <p>{data.abstract}</p>
           <ul>
-            <li>
-              <p>{point1}</p>
-            </li>
-            <li>{point2}</li>
-            <li>
-              <p>{point3}</p>
-            </li>
+            <li>{data.point1}</li>
+            <li>{data.point2}</li>
+            <li>{data.point3}</li>
           </ul>
-          <p>{summary}</p>
-          <p>{stack}</p>
-          <div className="ProjectLinksContainer">
-            <Button content={"GitHub"} />
-            <Button content={"Link"} />
-            <Button content={"Contributions"} />
-          </div>
+        </div>
+      </div>
+      <div className="project__summary">
+        <p className="bold">{data.summary}</p>
+        {/* <p>{data.stack}</p> */}
+        <div className="project__stackWrapper">
+          {data.stack.map((item, index) => (
+            <p key={index}>{item}</p>
+          ))}
+        </div>
+        <div className="project__linksWrapper">
+          <Button content={"GitHub"} />
+          <Button content={"Link"} />
+          <Button content={"Contributions"} />
         </div>
       </div>
     </div>

@@ -14,8 +14,9 @@ import {
   Git,
   VSCode,
   Node,
-  Logo,
 } from "./Icons";
+
+import Logo from "./Logo";
 
 const Footer = () => {
   return (
