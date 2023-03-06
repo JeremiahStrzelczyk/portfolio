@@ -25,7 +25,7 @@ const Project = ({ data, image }) => {
           </ul>
         </div>
       </div>
-      <div className="project__summary">
+      <div>
         <p className="bold">{data.summary}</p>
         {/* <p>{data.stack}</p> */}
         <div className="project__stackWrapper">

@@ -1,12 +1,9 @@
-const Button = ({ content, icon, styling }) => {
+const ButtonPrimary = ({ bType, content, icon }) => {
   return (
-    <button className={styling}>
-      <div className="button__wrapper">
-        <h6>{content}</h6>
-        {icon}
-      </div>
+    <button type={bType} className="button__primary">
+      {content} {icon}
     </button>
   );
 };
 
-export default Button;
+export default ButtonPrimary;

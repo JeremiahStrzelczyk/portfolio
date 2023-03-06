@@ -1,4 +1,4 @@
-import Button from "../components/Button";
+import ButtonPrimary from "../components/Button";
 import { ArrowDown } from "../components/Icons";
 
 const Hero = () => {
@@ -14,10 +14,10 @@ const Hero = () => {
           to delivering high-quality results, I am dedicated to developing
           efficient and user-friendly applications.
         </p>
-        <Button
+        <ButtonPrimary
+          type={"button"}
           content={"Check out my work"}
           icon={<ArrowDown />}
-          styling={"blend-bg button-primary"}
         />
       </div>
     </section>
