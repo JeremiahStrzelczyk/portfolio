@@ -42,6 +42,7 @@ const Contact = () => {
          ************************** */}
         <div className="column">
           <form
+            method="POST"
             onSubmit={handleSubmit}
             className="form"
             name="recruiter"
@@ -89,7 +90,7 @@ const Contact = () => {
              * Message
              ****************** */}
             <div className="contact__input">
-              <label className="bold" htmlFor="textarea" name="email">
+              <label className="bold" htmlFor="textarea">
                 Your message
               </label>
               <textarea
