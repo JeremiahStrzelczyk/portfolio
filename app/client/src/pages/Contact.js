@@ -44,6 +44,7 @@ const Contact = () => {
     // setName("");
     // setEmail("");
     // setContent("");
+    setFormState({ name: "", email: "", content: "" });
     e.preventDefault();
   };
   return (
