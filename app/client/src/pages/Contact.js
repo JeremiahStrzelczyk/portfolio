@@ -12,6 +12,11 @@ const Contact = () => {
   const handleContentInput = (e) => setContent(e.target.value);
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    alert(
+      "Hey thanks for attempting to send me an email! \n This functionality is currently in the works and should be online soon.\n Until then, please send me an email at Jeremiahss@Hotmail.com."
+    );
+
     setName("");
     setEmail("");
     setContent("");
