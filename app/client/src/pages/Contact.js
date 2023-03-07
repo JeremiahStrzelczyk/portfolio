@@ -13,9 +13,9 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    alert(
-      "Hey thanks for attempting to send me an email! \n This functionality is currently in the works and should be online soon.\n Until then, please send me an email at Jeremiahss@Hotmail.com."
-    );
+    // alert(
+    //   "Hey thanks for attempting to send me an email! \n This functionality is currently in the works and should be online soon.\n Until then, please send me an email at Jeremiahss@Hotmail.com."
+    // );
 
     setName("");
     setEmail("");
@@ -41,16 +41,22 @@ const Contact = () => {
          * FORM
          ************************** */}
         <div className="column">
-          <form onSubmit={handleSubmit} className="form">
+          <form
+            onSubmit={handleSubmit}
+            className="form"
+            name="Recruiter"
+            netlify
+          >
             <div className="contact__NameEmail">
               {/*********************
                * Name
                ****************** */}
               <div className="contact__input">
-                <label className="bold" htmlFor="name">
+                <label className="bold" htmlFor="name" name="Name">
                   Name
                 </label>
                 <input
+                  name="name"
                   type="text"
                   className="form__input"
                   id="name"
@@ -64,10 +70,11 @@ const Contact = () => {
                * Email
                ****************** */}
               <div className="contact__input">
-                <label className="bold" htmlFor="email">
+                <label className="bold" htmlFor="email" name="Email">
                   Email
                 </label>
                 <input
+                  name="email"
                   type="email"
                   className="form__input"
                   id="email"
