@@ -46,7 +46,7 @@ const Contact = () => {
             onSubmit={handleSubmit}
             className="form"
             name="recruiter"
-            netlify
+            data-netlify="true"
           >
             <div className="contact__NameEmail">
               {/*********************
