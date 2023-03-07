@@ -45,9 +45,9 @@ const Contact = () => {
             method="POST"
             onSubmit={handleSubmit}
             className="form"
-            name="recruiter"
-            data-netlify="true"
+            name="contact"
           >
+            <input type="hidden" name="form-name" value="contact" />
             <div className="contact__NameEmail">
               {/*********************
                * Name
@@ -57,8 +57,8 @@ const Contact = () => {
                   Name
                 </label>
                 <input
-                  name="name"
                   type="text"
+                  name="name"
                   className="form__input"
                   id="name"
                   value={name}
