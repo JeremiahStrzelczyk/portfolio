@@ -13,7 +13,13 @@ const SpeedScore = {
     "Collaborated with a team of developers to ensure code quality, maintainability, and scalability",
   summary:
     "Overall, SpeedScore is a showcase of my technical skills in full-stack web development and my ability to collaborate with a team towards a common goal.",
-  //   stack: "React JavaScript HTML CSS Express.js Node.js MongoDB",
+  links: {
+    github: "https://github.com/JeremiahStrzelczyk/speedscore",
+    live: "https://speedscore.onrender.com/",
+    contributions:
+      "https://github.com/JeremiahStrzelczyk/speedscore/commits/master",
+  },
+
   stack: [
     "JavaScript,",
     "HTML,",
@@ -29,9 +35,6 @@ const SpeedScore = {
     width: "1186",
     height: "848",
   },
-
-  //   gif: { speedscore },
-  //   alt: "SpeedScore",
 };
 
 const Featherdusters = {
@@ -54,7 +57,13 @@ const Featherdusters = {
   summary:
     "Overall, this project showcases my skills in front-end development and collaboration, and highlights my ability to create effective digital solutions for businesses.",
 
-  //   stack: "React  JavaScript  HTML  CSS",
+  links: {
+    github:
+      "https://github.com/JeremiahStrzelczyk/waterfowl-guiding-feather-dusters",
+    live: "https://www.featherdustersllc.com/",
+    contributions:
+      "https://github.com/JeremiahStrzelczyk/waterfowl-guiding-feather-dusters/commits/main",
+  },
   stack: ["JavaScript,", "HTML,", "CSS", "React,"],
   image: {
     alt: "Featherdusters LLC",

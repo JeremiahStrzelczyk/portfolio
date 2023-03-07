@@ -1,44 +1,38 @@
-import {
-  GitHub,
-  Phone,
-  Email,
-  LinkedIn,
-  StackOverflow,
-  ArrowDown,
-  JavaScript,
-  HTML,
-  CSS,
-  React,
-  MongoDB,
-  Express,
-  Git,
-  VSCode,
-  Node,
-} from "./Icons";
+import { GitHub, Phone, Email, LinkedIn, StackOverflow, React } from "./Icons";
 
 import Logo from "./Logo";
 
 const Footer = () => {
   return (
     <footer>
-      <div className="nav__container">
-        <div className="nav__links-container">
-          <div className="nav__contact">
+      {/**********************
+       * TOP Half
+       ********************* */}
+      <div className="footer__container">
+        {/************
+         * Phone
+         * Email
+         ********** */}
+        <div className="footer__links-container">
+          <a href="tel:5097607707">
             <Phone />
-            <a href="tel:5097607707" className="blend-text">
-              509-760-7707
-            </a>
-          </div>
-          <div className="nav__contact">
+            509-760-7707
+          </a>
+          <a href="mailto:jeremiahss@hotmail.com">
             <Email />
-            <a className="blend-text" href="mailto:jeremiahss@hotmail.com">
-              Jeremiahss@Hotmail.com
-            </a>
-          </div>
+            Jeremiahss@Hotmail.com
+          </a>
         </div>
       </div>
-      <div className="nav__container">
-        <div className="nav__links-container">
+
+      {/**********************
+       * BOTTOM Half
+       ********************* */}
+      <div className="footer__container">
+        {/*********************
+         * Social Media Links
+         *********************/}
+        <div className="footer__links-container">
           <a
             href="https://github.com/JeremiahStrzelczyk"
             target="_blank"
@@ -61,10 +55,18 @@ const Footer = () => {
             <StackOverflow />
           </a>
         </div>
+
+        {/************
+         * Copyright
+         ********** */}
         <p>
           &copy; Jeremiah Strzelczyk {new Date().getFullYear()}. All rights
           reserved
         </p>
+
+        {/************
+         * LOGO
+         ********** */}
         <a href="/">
           <Logo />
         </a>

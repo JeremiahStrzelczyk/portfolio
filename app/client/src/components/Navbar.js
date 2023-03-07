@@ -5,6 +5,10 @@ const Navbar = () => {
   return (
     <nav>
       <div className="nav__container">
+        {/**************************************
+         * Logo
+         * Local navigation items
+         **************************************/}
         <div className="nav__links-container">
           <a href="/">
             <Logo />
@@ -15,6 +19,10 @@ const Navbar = () => {
             Contact
           </a>
         </div>
+
+        {/**************************************
+         * Social media links
+         **************************************/}
         <div className="nav__links-container">
           <a
             href="https://github.com/JeremiahStrzelczyk"

@@ -1,43 +1,79 @@
-import Button from "../components/Button";
+/**
+ * Renders one Project by retrieving data from ProjectData.js
+ * to populate the pertinent information including:
+ *  - Title, Bullets, Summary
+ *  - List of Languages/Technologies used in the project
+ *  - Button linking to relevant information about the project
+ */
+
+import { ButtonSecondary } from "../components/Buttons";
 
 const Project = ({ data, image }) => {
   return (
     <div>
-      <div className="project__double-cols">
-        {/* <div className="project__imageContainer"> */}
-        <div className="project__column">
-          <img
-            className="project__img"
-            src={image}
-            width={data.image.width}
-            height={data.image.height}
-            alt={data.image.alt}
-          />
+      {/* Encompasses all Project information except the buttons linking
+        to repos */}
+      <div className="project__content">
+        <div className="project__double-cols">
+          {/********************
+           * IMAGE/GIF
+           *********************/}
+          <div className="project__column">
+            <img
+              className="project__img"
+              src={image}
+              width={data.image.width}
+              height={data.image.height}
+              alt={data.image.alt}
+            />
+          </div>
+
+          {/****************************
+           * Title, summary, bullets
+           ****************************/}
+          <div className="project__column">
+            <h3>{data.title}</h3>
+            <p>{data.abstract}</p>
+            <ul>
+              <li>{data.point1}</li>
+              <li>{data.point2}</li>
+              <li>{data.point3}</li>
+            </ul>
+          </div>
         </div>
-        {/* <div className="project__textContainer"> */}
-        <div className="project__column">
-          <h3>{data.title}</h3>
-          <p>{data.abstract}</p>
-          <ul>
-            <li>{data.point1}</li>
-            <li>{data.point2}</li>
-            <li>{data.point3}</li>
-          </ul>
+        <div>
+          <p className="bold">{data.summary}</p>
+          <div className="project__stackWrapper">
+            {data.stack.map((item, index) => (
+              <p key={index}>{item}</p>
+            ))}
+          </div>
         </div>
       </div>
-      <div>
-        <p className="bold">{data.summary}</p>
-        {/* <p>{data.stack}</p> */}
-        <div className="project__stackWrapper">
-          {data.stack.map((item, index) => (
-            <p key={index}>{item}</p>
-          ))}
-        </div>
-        <div className="project__linksWrapper">
-          <Button content={"GitHub"} />
-          <Button content={"Link"} />
-          <Button content={"Contributions"} />
-        </div>
+
+      {/***********************************
+       * Buttons navigating to respective
+       * locations
+       ************************************/}
+      <div className="project__linksWrapper">
+        <ButtonSecondary
+          type={"button"}
+          content={"GitHub Repo"}
+          link={data.links.github}
+          ariaLabel={"GitHub Repo"}
+        />
+        <ButtonSecondary
+          type={"button"}
+          content={"Visit Website"}
+          ariaLabel={"Visit Website"}
+          link={data.links.live}
+        />
+        <ButtonSecondary
+          type={"button"}
+          content={"My Contributions"}
+          ariaLabel={"My Contributions"}
+          link={data.links.contributions}
+        />
       </div>
     </div>
   );
