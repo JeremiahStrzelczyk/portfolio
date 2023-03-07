@@ -10,7 +10,7 @@ const Navbar = () => {
          * Local navigation items
          **************************************/}
         <div className="nav__links-container">
-          <a href="/">
+          <a href="/" aria-label="Home page">
             <Logo />
           </a>
           <a href="#skills">Skills</a>

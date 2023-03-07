@@ -67,7 +67,7 @@ const Footer = () => {
         {/************
          * LOGO
          ********** */}
-        <a href="/">
+        <a href="/" aria-label="Home page">
           <Logo />
         </a>
       </div>
