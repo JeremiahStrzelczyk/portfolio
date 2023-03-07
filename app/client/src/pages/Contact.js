@@ -67,10 +67,10 @@ const Contact = () => {
          ************************** */}
         <div className="column">
           <form
-            method="POST"
+            // method="POST"
             onSubmit={handleSubmit}
             className="form"
-            name="contact"
+            // name="contact"
           >
             <input type="hidden" name="form-name" value="contact" />
             <div className="contact__NameEmail">
