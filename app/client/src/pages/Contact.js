@@ -38,8 +38,8 @@ const Contact = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...formState }),
     })
-      .then(() => alert("Success!"))
-      .catch((error) => alert(error));
+      .then(() => console.log("Success!"))
+      .catch((error) => console.log(error));
 
     // setName("");
     // setEmail("");
