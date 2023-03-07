@@ -44,7 +44,7 @@ const Contact = () => {
           <form
             onSubmit={handleSubmit}
             className="form"
-            name="Recruiter"
+            name="recruiter"
             netlify
           >
             <div className="contact__NameEmail">
@@ -52,7 +52,7 @@ const Contact = () => {
                * Name
                ****************** */}
               <div className="contact__input">
-                <label className="bold" htmlFor="name" name="Name">
+                <label className="bold" htmlFor="name">
                   Name
                 </label>
                 <input
@@ -70,7 +70,7 @@ const Contact = () => {
                * Email
                ****************** */}
               <div className="contact__input">
-                <label className="bold" htmlFor="email" name="Email">
+                <label className="bold" htmlFor="email">
                   Email
                 </label>
                 <input
@@ -89,10 +89,11 @@ const Contact = () => {
              * Message
              ****************** */}
             <div className="contact__input">
-              <label className="bold" htmlFor="textarea">
+              <label className="bold" htmlFor="textarea" name="email">
                 Your message
               </label>
               <textarea
+                name="content"
                 rows="5"
                 wrap="hard"
                 maxLength="300"
