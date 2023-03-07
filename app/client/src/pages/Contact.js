@@ -2,24 +2,49 @@ import { useState } from "react";
 import { ButtonPrimary } from "../components/Buttons";
 import { Plane } from "../components/Icons";
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
+
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [content, setContent] = useState("");
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [content, setContent] = useState("");
 
-  const handleNameInput = (e) => setName(e.target.value);
-  const handleEmailInput = (e) => setEmail(e.target.value);
-  const handleContentInput = (e) => setContent(e.target.value);
+  // const handleNameInput = (e) => setName(e.target.value);
+  // const handleEmailInput = (e) => setEmail(e.target.value);
+  // const handleContentInput = (e) => setContent(e.target.value);
+
+  const handleChange = (e) =>
+    setFormState({ ...formState, [e.target.name]: e.target.value });
+
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    content: "",
+  });
+
+  const { name, email, content } = formState;
+
   const handleSubmit = (e) => {
-    e.preventDefault();
-
     // alert(
     //   "Hey thanks for attempting to send me an email! \n This functionality is currently in the works and should be online soon.\n Until then, please send me an email at Jeremiahss@Hotmail.com."
     // );
 
-    setName("");
-    setEmail("");
-    setContent("");
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...formState }),
+    })
+      .then(() => alert("Success!"))
+      .catch((error) => alert(error));
+
+    // setName("");
+    // setEmail("");
+    // setContent("");
+    e.preventDefault();
   };
   return (
     <section id="contact">
@@ -62,7 +87,8 @@ const Contact = () => {
                   className="form__input"
                   id="name"
                   value={name}
-                  onChange={handleNameInput}
+                  // onChange={handleNameInput}
+                  onChange={handleChange}
                   required
                 />
               </div>
@@ -80,7 +106,8 @@ const Contact = () => {
                   className="form__input"
                   id="email"
                   value={email}
-                  onChange={handleEmailInput}
+                  // onChange={handleEmailInput}
+                  onChange={handleChange}
                   required
                 />
               </div>
@@ -102,7 +129,8 @@ const Contact = () => {
                 className="form__input"
                 id="content"
                 value={content}
-                onChange={handleContentInput}
+                // onChange={handleContentInput}
+                onChange={handleChange}
                 required
               />
             </div>
