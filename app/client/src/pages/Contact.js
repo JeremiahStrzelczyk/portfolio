@@ -9,14 +9,6 @@ const encode = (data) => {
 };
 
 const Contact = () => {
-  // const [name, setName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [content, setContent] = useState("");
-
-  // const handleNameInput = (e) => setName(e.target.value);
-  // const handleEmailInput = (e) => setEmail(e.target.value);
-  // const handleContentInput = (e) => setContent(e.target.value);
-
   const handleChange = (e) =>
     setFormState({ ...formState, [e.target.name]: e.target.value });
 
@@ -29,29 +21,24 @@ const Contact = () => {
   const { name, email, content } = formState;
 
   const handleSubmit = (e) => {
-    // alert(
-    //   "Hey thanks for attempting to send me an email! \n This functionality is currently in the works and should be online soon.\n Until then, please send me an email at Jeremiahss@Hotmail.com."
-    // );
-
+    e.preventDefault();
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...formState }),
     })
-      .then(() => console.log("Success!"))
-      .catch((error) => console.log(error));
+      .then(() => alert("Thank you for the note"))
+      .catch((error) => alert(error));
 
-    // setName("");
-    // setEmail("");
-    // setContent("");
     setFormState({ name: "", email: "", content: "" });
-    e.preventDefault();
   };
+
   return (
     <section id="contact">
       <header>
         <h2>Contact</h2>
       </header>
+
       <div className="even-columns contact__stackColumns">
         <div className="column">
           <h3>Get in touch.</h3>
@@ -88,7 +75,6 @@ const Contact = () => {
                   className="form__input"
                   id="name"
                   value={name}
-                  // onChange={handleNameInput}
                   onChange={handleChange}
                   required
                 />
@@ -107,7 +93,6 @@ const Contact = () => {
                   className="form__input"
                   id="email"
                   value={email}
-                  // onChange={handleEmailInput}
                   onChange={handleChange}
                   required
                 />
@@ -126,11 +111,10 @@ const Contact = () => {
                 rows="5"
                 wrap="hard"
                 maxLength="300"
-                placeholder="We have a few questions to ask you..."
+                placeholder="Please enter your message here"
                 className="form__input"
                 id="content"
                 value={content}
-                // onChange={handleContentInput}
                 onChange={handleChange}
                 required
               />
@@ -142,7 +126,7 @@ const Contact = () => {
             <ButtonPrimary
               bType={"submit"}
               content={"Send Message"}
-              icon={<Plane />}
+              icon=<Plane />
             />
           </form>
         </div>

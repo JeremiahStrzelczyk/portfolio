@@ -23,7 +23,7 @@ const ButtonSecondary = ({ bType, content, icon, link, ariaLabel }) => {
   return (
     <a href={link} aria-label={ariaLabel} target="_blank" rel="noreferrer">
       <button
-        tabindex="-1"
+        tabIndex="-1"
         aria-hidden="true"
         type={bType}
         className="button__secondary"
