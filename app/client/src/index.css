@@ -10,26 +10,22 @@
 /* || VARIABLES */
 :root {
   /* COLORS */
-  /* --primary-color: #233329;
-  --secondary-color: #63d471; */
-  --primary-color: #0cf708;
-  --secondary-color: #affa00;
+
+  /* --primary-color: #0cf708;
+  --secondary-color: #affa00; */
+  --primary-color: blue;
+  --secondary-color: purple;
   --blend-color: linear-gradient(
     270deg,
     var(--primary-color) 0%,
     var(--secondary-color) 100%
   );
+  --blend-color-reverse: linear-gradient(
+    270deg,
+    var(--secondary-color) 0%,
+    var(--primary-color) 100%
+  );
 
-  --blend-color-75: linear-gradient(
-    270deg,
-    var(--primary-color) 0%,
-    var(--secondary-color) 75%
-  );
-  --blend-color-50: linear-gradient(
-    270deg,
-    var(--primary-color) 0%,
-    var(--secondary-color) 50%
-  );
   --dark-color: #161a16;
   --light-color: whitesmoke;
   --dark-75: rgba(22, 26, 22, 0.75);
@@ -299,7 +295,7 @@ button {
 }
 
 .button__primary:hover {
-  background: var(--blend-color-75);
+  background: var(--blend-color-reverse);
   gap: 24px;
 }
 
