@@ -11,8 +11,6 @@
 :root {
   /* COLORS */
 
-  /* --primary-color: #0cf708;
-  --secondary-color: #affa00; */
   --primary-color: blue;
   --secondary-color: purple;
   --blend-color: linear-gradient(
@@ -522,6 +520,14 @@ textarea {
   border: none;
   border-radius: 8px;
   padding: var(--px24) var(--px16);
+}
+
+.form__input--error {
+  border: 3px solid var(--error);
+}
+
+.form__input--success {
+  border: 3px solid var(--success);
 }
 
 @media screen and (max-width: 900px) {
