@@ -17,7 +17,7 @@ Welcome to my portfolio website! This website showcases my skills and projects a
 
 Please feel free to contact me at Jeremiahss@Hotmail.com if you have any other questions or opportunities. You can also connect with me on LinkedIn or various other forms of social media.
 
-- [LinkdIn](https://www.linkedin.com/in/jeremiah-strzelczyk/)
+- [LinkedIn](https://www.linkedin.com/in/jeremiah-strzelczyk/)
 
 # License
 
