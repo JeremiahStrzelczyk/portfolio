@@ -126,6 +126,7 @@ const Contact = () => {
             <ButtonPrimary
               bType={"submit"}
               content={"Send Message"}
+              link={"#contact"}
               icon=<Plane />
             />
           </form>
