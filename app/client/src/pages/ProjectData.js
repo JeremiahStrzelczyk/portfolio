@@ -1,6 +1,7 @@
 const SpeedScore = {
   styles: {
-    backgroundColor: "#0d6efd",
+    backgroundColor: "#024CB6",
+    // backgroundColor: "#0d6efd",
   },
   title: "SpeedScore",
   abstract:
@@ -39,7 +40,8 @@ const SpeedScore = {
 
 const Featherdusters = {
   styles: {
-    backgroundColor: "#85756a",
+    backgroundColor: "#5C514C",
+    // backgroundColor: "#85756a",
   },
   title: "Featherdusters LLC",
   abstract:
