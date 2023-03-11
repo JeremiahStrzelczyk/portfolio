@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ButtonPrimary } from "../components/Buttons";
+import { ButtonForm, ButtonPrimary } from "../components/Buttons";
 import { Plane } from "../components/Icons";
 
 const encode = (data) => {
@@ -21,6 +21,7 @@ const Contact = () => {
   const { name, email, content } = formState;
 
   const handleSubmit = (e) => {
+    alert("Test");
     e.preventDefault();
     fetch("/", {
       method: "POST",
@@ -54,12 +55,7 @@ const Contact = () => {
          * FORM
          ************************** */}
         <div className="column">
-          <form
-            // method="POST"
-            onSubmit={handleSubmit}
-            className="form"
-            // name="contact"
-          >
+          <form onSubmit={handleSubmit} className="contact__form">
             <input type="hidden" name="form-name" value="contact" />
             <div className="contact__NameEmail">
               {/*********************
@@ -123,8 +119,7 @@ const Contact = () => {
             {/*********************
              * Buttons
              ****************** */}
-            <ButtonPrimary
-              bType={"submit"}
+            <ButtonForm
               content={"Send Message"}
               link={"#contact"}
               icon=<Plane />

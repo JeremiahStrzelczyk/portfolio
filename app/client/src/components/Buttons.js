@@ -1,39 +1,32 @@
-/**
- * Two button styles currently exist
- */
-
-const ButtonPrimary = ({ bType, content, icon, link }) => {
+const ButtonPrimary = ({ content, icon, link }) => {
   return (
-    <a href={link}>
-      <button
-        // tabindex="-1"
-        // aria-hidden="true"
-        type={bType}
-        className="button__primary"
-      >
-        <div className="button__content">
-          {content} {icon}
-        </div>
-      </button>
+    <a role="button" href={link} className="button__link button__primary">
+      {content} {icon}
     </a>
   );
 };
 
-const ButtonSecondary = ({ bType, content, icon, link, ariaLabel }) => {
+const ButtonForm = ({ content, icon }) => {
   return (
-    <a href={link} aria-label={ariaLabel} target="_blank" rel="noreferrer">
-      <button
-        tabIndex="-1"
-        aria-hidden="true"
-        type={bType}
-        className="button__secondary"
-      >
-        <div aria-hidden="true" className="button__content">
-          {content} {icon}
-        </div>
-      </button>
+    <button className="button__link button__primary">
+      {content} {icon}
+    </button>
+  );
+};
+
+const ButtonSecondary = ({ content, icon, link, ariaLabel }) => {
+  return (
+    <a
+      href={link}
+      aria-label={ariaLabel}
+      target="_blank"
+      rel="noopener noreferrer"
+      title="This link will open in a new tab"
+      className="button__link button__secondary"
+    >
+      {content} {icon}
     </a>
   );
 };
 
-export { ButtonPrimary, ButtonSecondary };
+export { ButtonPrimary, ButtonSecondary, ButtonForm };
