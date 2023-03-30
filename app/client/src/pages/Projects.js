@@ -47,18 +47,18 @@ const Projects = () => {
       height={SpeedScore.image.height}
       alt={SpeedScore.image.alt}
       srcSet={`
-      ${speedscore_600x400_72} 600w,
-      ${speedscore_600x400_144} 600w,
-      ${speedscore_600x400_250} 600w,
-      ${speedscore_600x400_350} 600w,
-      ${speedscore_900x600_72} 900w,
-      ${speedscore_900x600_144} 900w,
-      ${speedscore_900x600_250} 900w,
-      ${speedscore_900x600_350} 900w,
-      ${speedscore_1200x800_72} 1200w,
-      ${speedscore_1200x800_144} 1200w,
-      ${speedscore_1200x800_250} 1200w,
-      ${speedscore_1200x800_350} 1200w
+      ${speedscore_600x400_72} 600w 1x,
+      ${speedscore_600x400_144} 600w 2x,
+      ${speedscore_600x400_250} 600w 3x,
+      ${speedscore_600x400_350} 600w 4x,
+      ${speedscore_900x600_72} 900w 1x,
+      ${speedscore_900x600_144} 900w 2x,
+      ${speedscore_900x600_250} 900w 3x,
+      ${speedscore_900x600_350} 900w 4x,
+      ${speedscore_1200x800_72} 1200w 1x,
+      ${speedscore_1200x800_144} 1200w 2x,
+      ${speedscore_1200x800_250} 1200w 3x,
+      ${speedscore_1200x800_350} 1200w 4x
       `}
       sizes="(max-width: 600px) 100vw, (max-width: 900px) 33.33vw, (max-width: 1200px) 25vw, 300px"
     />
@@ -72,18 +72,18 @@ const Projects = () => {
       height={Featherdusters.image.height}
       alt={Featherdusters.image.alt}
       srcSet={`
-      ${featherdusters_600x400_72} 600w,
-      ${featherdusters_600x400_144} 600w,
-      ${featherdusters_600x400_250} 600w,
-      ${featherdusters_600x400_350} 600w,
-      ${featherdusters_900x600_72} 900w,
-      ${featherdusters_900x600_144} 900w,
-      ${featherdusters_900x600_250} 900w,
-      ${featherdusters_900x600_350} 900w,
-      ${featherdusters_1200x800_72} 1200w,
-      ${featherdusters_1200x800_144} 1200w,
-      ${featherdusters_1200x800_250} 1200w,
-      ${featherdusters_1200x800_350} 1200w
+      ${featherdusters_600x400_72} 600w 1x,
+      ${featherdusters_600x400_144} 600w 2x,
+      ${featherdusters_600x400_250} 600w 3x,
+      ${featherdusters_600x400_350} 600w 4x,
+      ${featherdusters_900x600_72} 900w 1x,
+      ${featherdusters_900x600_144} 900w 2x,
+      ${featherdusters_900x600_250} 900w 3x,
+      ${featherdusters_900x600_350} 900w 4x,
+      ${featherdusters_1200x800_72} 1200w 1x,
+      ${featherdusters_1200x800_144} 1200w 2x,
+      ${featherdusters_1200x800_250} 1200w 3x,
+      ${featherdusters_1200x800_350} 1200w 4x
       `}
       sizes="(max-width: 600px) 100vw, (max-width: 900px) 33.33vw, (max-width: 1200px) 25vw, 300px"
     />
