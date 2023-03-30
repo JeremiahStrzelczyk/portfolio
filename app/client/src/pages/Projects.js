@@ -90,7 +90,7 @@ const Projects = () => {
   );
 
   return (
-    <section tabindex="0" id="projects">
+    <section tabIndex="0" id="projects">
       <header>
         <h2>Projects</h2>
       </header>

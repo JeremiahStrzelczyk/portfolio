@@ -12,7 +12,7 @@ import {
 
 const Skills = () => {
   return (
-    <section tabindex="0" id="skills">
+    <section tabIndex="0" id="skills">
       <header>
         <h2>Skills</h2>
       </header>

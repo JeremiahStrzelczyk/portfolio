@@ -11,7 +11,7 @@ const Navbar = () => {
          **************************************/}
         <div className="nav__links-container">
           <a href="/" aria-label="Home page">
-            <Logo />
+            <Logo id={"navbar"} />
           </a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>

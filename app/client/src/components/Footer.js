@@ -68,7 +68,7 @@ const Footer = () => {
          * LOGO
          ********** */}
         <a href="/" aria-label="Home page">
-          <Logo />
+          <Logo id={"footer"} />
         </a>
       </div>
     </footer>

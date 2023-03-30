@@ -3,7 +3,7 @@ import { ArrowDown } from "../components/Icons";
 
 const Hero = () => {
   return (
-    <section tabindex="0">
+    <section tabIndex="0">
       <div className="hero">
         <h3 className="blend-text">Hey, I'm Jeremiah</h3>
         <h1>Full Stack Web Developer</h1>
