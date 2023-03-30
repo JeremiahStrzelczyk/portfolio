@@ -19,13 +19,14 @@ const Project = ({ data, image }) => {
            * IMAGE/GIF
            *********************/}
           <div className="project__column">
-            <img
+            {/* <img
               className="project__img"
               src={image}
               width={data.image.width}
               height={data.image.height}
               alt={data.image.alt}
-            />
+            /> */}
+            {image}
           </div>
 
           {/****************************
