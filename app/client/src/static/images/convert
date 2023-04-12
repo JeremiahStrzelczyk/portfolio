@@ -1,0 +1,16 @@
+convert speedscore_1186x848.png -resize 500x900 -quality 80 speedscore_500.jpg
+convert speedscore_1186x848.png -resize 900x1000 -quality 80 speedscore_900.jpg
+convert speedscore_1186x848.png -quality 80 speedscore_1186.jpg
+
+convert speedscore_1186x848.png -resize 500x900 -quality 65 speedscore_500.webp
+convert speedscore_1186x848.png -resize 900x1000 -quality 65 speedscore_900.webp
+convert speedscore_1186x848.png -quality 65 speedscore_1186.webp
+
+convert featherdusters_1209x851.png -resize 500x900 -quality 80 featherdusters_500.jpg
+convert featherdusters_1209x851.png -resize 900x1000 -quality 80 featherdusters_900.jpg
+convert featherdusters_1209x851.png -quality 80 featherdusters_1209.jpg
+
+convert featherdusters_1209x851.png -resize 500x900 -quality 65 featherdusters_500.webp
+convert featherdusters_1209x851.png -resize 900x1000 -quality 65 featherdusters_900.webp
+convert featherdusters_1209x851.png -quality 65 featherdusters_1209.webp
+
