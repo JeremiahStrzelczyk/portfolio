@@ -7,34 +7,21 @@
 
 import Project from "./Project";
 
-import speedscore from "../static/images/speedscore_1186x848.png";
-import featherdusters from "../static/images/featherdusters_1209x851.png";
+import ss_jp_v1 from "../static/images/speedscore_1186x848_resized/speedscore_500.jpg";
+import ss_jp_v2 from "../static/images/speedscore_1186x848_resized/speedscore_900.jpg";
+import ss_jp_v3 from "../static/images/speedscore_1186x848_resized/speedscore_1186.jpg";
 
-import speedscore_600x400_72 from "../static/images/speedscore_1186x848_resized/speedscore_1186x848_600x400_72.jpg";
-import speedscore_600x400_144 from "../static/images/speedscore_1186x848_resized/speedscore_1186x848_600x400_144.jpg";
-import speedscore_600x400_250 from "../static/images/speedscore_1186x848_resized/speedscore_1186x848_600x400_250.jpg";
-import speedscore_600x400_350 from "../static/images/speedscore_1186x848_resized/speedscore_1186x848_600x400_350.jpg";
-import speedscore_900x600_72 from "../static/images/speedscore_1186x848_resized/speedscore_1186x848_900x600_72.jpg";
-import speedscore_900x600_144 from "../static/images/speedscore_1186x848_resized/speedscore_1186x848_900x600_144.jpg";
-import speedscore_900x600_250 from "../static/images/speedscore_1186x848_resized/speedscore_1186x848_900x600_250.jpg";
-import speedscore_900x600_350 from "../static/images/speedscore_1186x848_resized/speedscore_1186x848_900x600_350.jpg";
-import speedscore_1200x800_72 from "../static/images/speedscore_1186x848_resized/speedscore_1186x848_1200x800_72.jpg";
-import speedscore_1200x800_144 from "../static/images/speedscore_1186x848_resized/speedscore_1186x848_1200x800_144.jpg";
-import speedscore_1200x800_250 from "../static/images/speedscore_1186x848_resized/speedscore_1186x848_1200x800_250.jpg";
-import speedscore_1200x800_350 from "../static/images/speedscore_1186x848_resized/speedscore_1186x848_1200x800_350.jpg";
+import ss_wp_v1 from "../static/images/speedscore_1186x848_resized/speedscore_500.webp";
+import ss_wp_v2 from "../static/images/speedscore_1186x848_resized/speedscore_900.webp";
+import ss_wp_v3 from "../static/images/speedscore_1186x848_resized/speedscore_1186.webp";
 
-import featherdusters_600x400_72 from "../static/images/featherdusters_1209x851_resized/featherdusters_1209x851_600x400_72.jpg";
-import featherdusters_600x400_144 from "../static/images/featherdusters_1209x851_resized/featherdusters_1209x851_600x400_144.jpg";
-import featherdusters_600x400_250 from "../static/images/featherdusters_1209x851_resized/featherdusters_1209x851_600x400_250.jpg";
-import featherdusters_600x400_350 from "../static/images/featherdusters_1209x851_resized/featherdusters_1209x851_600x400_350.jpg";
-import featherdusters_900x600_72 from "../static/images/featherdusters_1209x851_resized/featherdusters_1209x851_900x600_72.jpg";
-import featherdusters_900x600_144 from "../static/images/featherdusters_1209x851_resized/featherdusters_1209x851_900x600_144.jpg";
-import featherdusters_900x600_250 from "../static/images/featherdusters_1209x851_resized/featherdusters_1209x851_900x600_250.jpg";
-import featherdusters_900x600_350 from "../static/images/featherdusters_1209x851_resized/featherdusters_1209x851_900x600_350.jpg";
-import featherdusters_1200x800_72 from "../static/images/featherdusters_1209x851_resized/featherdusters_1209x851_1200x800_72.jpg";
-import featherdusters_1200x800_144 from "../static/images/featherdusters_1209x851_resized/featherdusters_1209x851_1200x800_144.jpg";
-import featherdusters_1200x800_250 from "../static/images/featherdusters_1209x851_resized/featherdusters_1209x851_1200x800_250.jpg";
-import featherdusters_1200x800_350 from "../static/images/featherdusters_1209x851_resized/featherdusters_1209x851_1200x800_350.jpg";
+import fd_jp_v1 from "../static/images/featherdusters_1209x851_resized/featherdusters_500.jpg";
+import fd_jp_v2 from "../static/images/featherdusters_1209x851_resized/featherdusters_900.jpg";
+import fd_jp_v3 from "../static/images/featherdusters_1209x851_resized/featherdusters_1209.jpg";
+
+import fd_wp_v1 from "../static/images/featherdusters_1209x851_resized/featherdusters_500.webp";
+import fd_wp_v2 from "../static/images/featherdusters_1209x851_resized/featherdusters_900.webp";
+import fd_wp_v3 from "../static/images/featherdusters_1209x851_resized/featherdusters_1209.webp";
 
 import { SpeedScore, Featherdusters } from "./ProjectData";
 
@@ -42,50 +29,31 @@ const Projects = () => {
   const image_speedscore = (
     <img
       className="project__img"
-      src={speedscore}
+      src={ss_jp_v1}
       width={SpeedScore.image.width}
       height={SpeedScore.image.height}
       alt={SpeedScore.image.alt}
       srcSet={`
-      ${speedscore_600x400_72} 600w 1x,
-      ${speedscore_600x400_144} 600w 2x,
-      ${speedscore_600x400_250} 600w 3x,
-      ${speedscore_600x400_350} 600w 4x,
-      ${speedscore_900x600_72} 900w 1x,
-      ${speedscore_900x600_144} 900w 2x,
-      ${speedscore_900x600_250} 900w 3x,
-      ${speedscore_900x600_350} 900w 4x,
-      ${speedscore_1200x800_72} 1200w 1x,
-      ${speedscore_1200x800_144} 1200w 2x,
-      ${speedscore_1200x800_250} 1200w 3x,
-      ${speedscore_1200x800_350} 1200w 4x
+      ${ss_wp_v1} 500w, ${ss_jp_v1} 500w,
+      ${ss_wp_v2} 900w, ${ss_jp_v2} 900w,
+      ${ss_wp_v3} 1186w, ${ss_jp_v3} 1186w,
+
       `}
-      sizes="(max-width: 600px) 100vw, (max-width: 900px) 33.33vw, (max-width: 1200px) 25vw, 300px"
     />
   );
 
   const image_featherdusters = (
     <img
       className="project__img"
-      src={featherdusters}
+      src={fd_jp_v1}
       width={Featherdusters.image.width}
       height={Featherdusters.image.height}
       alt={Featherdusters.image.alt}
       srcSet={`
-      ${featherdusters_600x400_72} 600w 1x,
-      ${featherdusters_600x400_144} 600w 2x,
-      ${featherdusters_600x400_250} 600w 3x,
-      ${featherdusters_600x400_350} 600w 4x,
-      ${featherdusters_900x600_72} 900w 1x,
-      ${featherdusters_900x600_144} 900w 2x,
-      ${featherdusters_900x600_250} 900w 3x,
-      ${featherdusters_900x600_350} 900w 4x,
-      ${featherdusters_1200x800_72} 1200w 1x,
-      ${featherdusters_1200x800_144} 1200w 2x,
-      ${featherdusters_1200x800_250} 1200w 3x,
-      ${featherdusters_1200x800_350} 1200w 4x
+      ${fd_wp_v1} 500w, ${fd_jp_v1} 500w,
+      ${fd_wp_v2} 900w, ${fd_jp_v2} 900w,
+      ${fd_wp_v3} 1186w, ${fd_jp_v3} 1186w,
       `}
-      sizes="(max-width: 600px) 100vw, (max-width: 900px) 33.33vw, (max-width: 1200px) 25vw, 300px"
     />
   );
 

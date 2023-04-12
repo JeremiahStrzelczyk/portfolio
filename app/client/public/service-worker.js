@@ -1,7 +1,7 @@
 const CACHE_NAME = "jeremiah-strzelczyk-portfolio-v1";
 const urlsToCache = [
   "/",
-  "/index.html",
+  // "/index.html",
   "/manifest.json",
   // add any other assets you want to cache here
 ];
