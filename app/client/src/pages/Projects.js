@@ -8,6 +8,7 @@
 import Project from "./Project";
 
 import FourPrinciples from "./FourPrinciples";
+import SEIModel from "./SEIModels";
 
 import ss_jp_v1 from "../static/images/speedscore_1186x848_resized/speedscore_500.jpg";
 import ss_jp_v2 from "../static/images/speedscore_1186x848_resized/speedscore_900.jpg";
@@ -31,7 +32,9 @@ import {
   P2_StudentAgency,
   P2_FourPrinciples,
   P2_SEIModels,
+  P3,
 } from "./ProjectData";
+import AssessmentAndPlacement from "./AssessmentAndPlacement";
 
 const Projects = () => {
   const image_speedscore = (
@@ -92,6 +95,17 @@ const Projects = () => {
         <Project data={P2_Overview} image={image_featherdusters} />
         <Project data={P2_StudentAgency} image={image_featherdusters} />
         <FourPrinciples data={P2_FourPrinciples} image={image_featherdusters} />
+        <SEIModel />
+      </div>
+
+      <header>
+        <h2>Assessment and Placement</h2>
+      </header>
+      {/****************
+       * Part 3 - Assessment and Placement
+       ****************/}
+      <div style={P3.styles} className="project__container featherdusters">
+        <AssessmentAndPlacement />
       </div>
     </section>
   );
