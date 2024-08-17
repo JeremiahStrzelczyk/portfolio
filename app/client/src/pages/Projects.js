@@ -7,6 +7,8 @@
 
 import Project from "./Project";
 
+import FourPrinciples from "./FourPrinciples";
+
 import ss_jp_v1 from "../static/images/speedscore_1186x848_resized/speedscore_500.jpg";
 import ss_jp_v2 from "../static/images/speedscore_1186x848_resized/speedscore_900.jpg";
 import ss_jp_v3 from "../static/images/speedscore_1186x848_resized/speedscore_1186.jpg";
@@ -23,7 +25,13 @@ import fd_wp_v1 from "../static/images/featherdusters_1209x851_resized/featherdu
 import fd_wp_v2 from "../static/images/featherdusters_1209x851_resized/featherdusters_900.webp";
 import fd_wp_v3 from "../static/images/featherdusters_1209x851_resized/featherdusters_1209.webp";
 
-import { SpeedScore, Featherdusters } from "./ProjectData";
+import {
+  SpeedScore,
+  P2_Overview,
+  P2_StudentAgency,
+  P2_FourPrinciples,
+  P2_SEIModels,
+} from "./ProjectData";
 
 const Projects = () => {
   const image_speedscore = (
@@ -46,9 +54,9 @@ const Projects = () => {
     <img
       className="project__img"
       src={fd_jp_v1}
-      width={Featherdusters.image.width}
-      height={Featherdusters.image.height}
-      alt={Featherdusters.image.alt}
+      width={P2_Overview.image.width}
+      height={P2_Overview.image.height}
+      alt={P2_Overview.image.alt}
       srcSet={`
       ${fd_wp_v1} 500w, ${fd_jp_v1} 500w,
       ${fd_wp_v2} 900w, ${fd_jp_v2} 900w,
@@ -60,7 +68,7 @@ const Projects = () => {
   return (
     <section tabIndex="0" id="projects">
       <header>
-        <h2>Projects</h2>
+        <h2>Key Aspects of Arizona's Approach</h2>
       </header>
 
       {/**************
@@ -71,14 +79,19 @@ const Projects = () => {
         <Project data={SpeedScore} image={image_speedscore} />
       </div>
 
+      <header>
+        <h2>Four Principles of Arizona's Language Development Approach</h2>
+      </header>
       {/****************
-       * FEATHERDUSTERS
+       * Part 2 - Overview
        ****************/}
       <div
-        style={Featherdusters.styles}
+        style={P2_Overview.styles}
         className="project__container featherdusters"
       >
-        <Project data={Featherdusters} image={image_featherdusters} />
+        <Project data={P2_Overview} image={image_featherdusters} />
+        <Project data={P2_StudentAgency} image={image_featherdusters} />
+        <FourPrinciples data={P2_FourPrinciples} image={image_featherdusters} />
       </div>
     </section>
   );

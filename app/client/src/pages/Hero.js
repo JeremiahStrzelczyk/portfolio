@@ -7,11 +7,11 @@ const Hero = () => {
       <div className="hero">
         <h3 className="blend-text">Jeremiah Strzelczyk</h3>
         <h1>Analyzing Arizona's Language Development Approach</h1>
-        <p>Yay? TEST notehuesnoth TEST again Hello!</p>
+        <p>Do I need this?</p>
         <div>
           <ButtonPrimary
             type={"button"}
-            content={"Part I: Terminology"}
+            content={"Key Aspects of Arizona's Approach"}
             icon={<ArrowDown />}
             link={"#projects"}
           />

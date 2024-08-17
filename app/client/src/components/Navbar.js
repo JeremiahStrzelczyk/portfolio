@@ -1,4 +1,4 @@
-import { GitHub, LinkedIn, StackOverflow } from "./Icons";
+// import { GitHub, LinkedIn, StackOverflow } from "./Icons";
 import Logo from "./Logo";
 
 const Navbar = () => {
@@ -13,7 +13,6 @@ const Navbar = () => {
           <a href="/" aria-label="Home page">
             <Logo id={"navbar"} />
           </a>
-     
         </div>
 
         {/**************************************

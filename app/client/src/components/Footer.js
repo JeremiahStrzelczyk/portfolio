@@ -1,4 +1,5 @@
-import { GitHub, Phone, Email, LinkedIn, StackOverflow, React } from "./Icons";
+import { React } from "./Icons";
+// import { GitHub, Phone, Email, LinkedIn, StackOverflow, React } from "./Icons";
 
 import Logo from "./Logo";
 
@@ -13,7 +14,6 @@ const Footer = () => {
          * Phone
          * Email
          ********** */}
-      
       </div>
 
       {/**********************
@@ -23,7 +23,6 @@ const Footer = () => {
         {/*********************
          * Social Media Links
          *********************/}
-      
 
         {/************
          * Copyright

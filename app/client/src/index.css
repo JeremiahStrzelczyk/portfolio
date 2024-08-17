@@ -137,7 +137,7 @@ button {
 }
 
 /* Hacky solution: 
-  Problem: I wanted my bullets to line up with the text of the container. 
+  Problem: I wanted my bullet_contents to line up with the text of the container. 
            Using "inside" position created a new problem where the subsequent
            lines would also line up with the text of the container rather than
            indent as desired.
@@ -215,10 +215,6 @@ a {
 }
 
 /* || ICONS/SVG */
-.icons__skills {
-  height: var(--px64);
-  color: var(--dark-color);
-}
 
 .icons__icon {
   height: 18px;
@@ -418,19 +414,6 @@ footer {
   }
 }
 
-/* || SKILLS */
-.skills__icon-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.skills__icon-container * {
-  background-color: var(--dark-10);
-  border-radius: 10px;
-  padding: var(--px32);
-}
-
 /* || PROJECTS */
 .project__double-cols {
   display: flex;
@@ -488,7 +471,6 @@ footer {
   }
 }
 
-
 .form__input {
   background-color: var(--dark-10);
   border: none;
@@ -503,7 +485,6 @@ footer {
 .form__input--success {
   border: 3px solid var(--success);
 }
-
 
 .column {
   flex-grow: 1;

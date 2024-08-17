@@ -14,51 +14,59 @@ const Project = ({ data, image }) => {
       {/* Encompasses all Project information except the buttons linking
         to repos */}
       <div className="project__content">
-        <h3>{data.title}</h3>
-        <p>{data.overview && data.overview}</p>
         <div className="project__double-cols">
           {/********************
            * IMAGE/GIF
            *********************/}
           <div className="project__column">
-            <ul>
-              {data.bullets &&
-                data.bullets.map((bullet, index) => (
-                  <li key={index}>{bullet}</li>
-                ))}
-            </ul>
+            {/* <img
+              className="project__img"
+              src={image}
+              width={data.image.width}
+              height={data.image.height}
+              alt={data.image.alt}
+            /> */}
+            {image}
           </div>
 
           {/****************************
            * Title, summary, bullet_contents
            ****************************/}
           <div className="project__column">
-            {/* Some slides might not contain bullet_contents, so we must check
-             * that it's empty first */}
-            {/* <ul>
-              {data.bullet_contents &&
-                data.bullet_contents.map((bullet_content, index) => (
-                  <li key={index}>{bullet_content}</li>
-                ))}
-            </ul> */}
-            <p>{data.presenter_notes}</p>
+            <h3>"Terminology"</h3>
+            <p>
+              "Full-stack web application for speed golfers to record stats,
+              manage friends, and access a feed mode"
+            </p>
+            <ul>
+              <li>
+                "Implemented Google authentication for user login and used
+                accessibility standards to ensure compliance and improve app
+                usability"
+              </li>
+              <li>
+                "Designed and developed a badge system that depends on golfer's
+                stats to incentivize engagement and improve user retention"
+              </li>
+              <li>"data_point3"</li>
+            </ul>
           </div>
         </div>
-        {/* <div>
-          <p className="bold">{data.summary}</p>
+        <div>
+          <p className="bold">"data_summary"</p>
           <div className="project__stackWrapper">
             {data.stack.map((item, index) => (
               <p key={index}>{item}</p>
             ))}
           </div>
-        </div> */}
+        </div>
       </div>
 
       {/***********************************
        * Buttons navigating to respective
        * locations
        ************************************/}
-      {/* <div className="project__linksWrapper">
+      <div className="project__linksWrapper">
         <ButtonSecondary
           type={"button"}
           content={"GitHub Repo"}
@@ -77,7 +85,7 @@ const Project = ({ data, image }) => {
           ariaLabel={"My Contributions"}
           link={data.links.contributions}
         />
-      </div> */}
+      </div>
     </div>
   );
 };
