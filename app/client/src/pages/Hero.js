@@ -5,18 +5,13 @@ const Hero = () => {
   return (
     <section tabIndex="0">
       <div className="hero">
-        <h3 className="blend-text">Hey, I'm Jeremiah</h3>
-        <h1>Full Stack Web Developer</h1>
-        <p>
-          I have experience in web development and a passion for creating
-          innovative solutions. With a focus on user experience and a commitment
-          to delivering high-quality results, I am dedicated to developing
-          efficient and user-friendly applications.
-        </p>
+        <h3 className="blend-text">Jeremiah Strzelczyk</h3>
+        <h1>Analyzing Arizona's Language Development Approach</h1>
+        <p>Yay? TEST notehuesnoth TEST again Hello!</p>
         <div>
           <ButtonPrimary
             type={"button"}
-            content={"Check out my work"}
+            content={"Part I: Terminology"}
             icon={<ArrowDown />}
             link={"#projects"}
           />
