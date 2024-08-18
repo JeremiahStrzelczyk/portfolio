@@ -31,8 +31,8 @@ const CACHE_NAME = "jeremiah-strzelczyk-portfolio-v2"; // Updated version
 const urlsToCache = [
   "/",
   "/manifest.json",
-  "/main.84e69138.js", // Add your JS file here
-  "/main.a321c9c5.css", // Add your CSS file here
+  // "/main.84e69138.js", // Add your JS file here
+  // "/main.a321c9c5.css", // Add your CSS file here
   // Add other assets you want to cache
 ];
 
