@@ -8,7 +8,6 @@ Welcome to my portfolio website! This website showcases my skills and projects a
 - Navigation bar to easily access different sections of the website
 - Projects section to showcase my work
 - Contact form to get in touch with me
-- Change
 
 # Demo
 
