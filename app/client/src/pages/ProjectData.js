@@ -1,3 +1,10 @@
+const P1 = {
+  styles: {
+    backgroundColor: "#b399ff",
+    // backgroundColor: "#0d6efd",
+  },
+};
+
 const SpeedScore = {
   styles: {
     backgroundColor: "#b399ff",
@@ -218,4 +225,5 @@ export {
   P2_FourPrinciples,
   P2_SEIModels,
   P3,
+  P1,
 };

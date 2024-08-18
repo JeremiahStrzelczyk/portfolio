@@ -1,93 +1,146 @@
-/**
- * Renders one Project by retrieving data from ProjectData.js
- * to populate the pertinent information including:
- *  - Title, Bullets, Summary
- *  - List of Languages/Technologies used in the project
- *  - Button linking to relevant information about the project
- */
-
-import { ButtonSecondary } from "../components/Buttons";
-
-const Project = ({ data, image }) => {
+const Terminology = () => {
   return (
     <div>
-      {/* Encompasses all Project information except the buttons linking
-        to repos */}
       <div className="project__content">
+        <h3>What defines an English Language (EL) student?</h3>
+        <p>
+          An EL, according to Arizona State Legislature (2024), "means a child
+          who does not speak English or whose native language is not English,
+          and who is not currently able to perform ordinary classroom work in
+          English." That is to say that a child who is learning English as a
+          second language and who needs translation in order to understand daily
+          requests is considered an EL.
+        </p>
         <div className="project__double-cols">
-          {/********************
-           * IMAGE/GIF
-           *********************/}
-          <div className="project__column">
-            {/* <img
-              className="project__img"
-              src={image}
-              width={data.image.width}
-              height={data.image.height}
-              alt={data.image.alt}
-            /> */}
-            {image}
-          </div>
+          <div className="project__column"></div>
 
-          {/****************************
-           * Title, summary, bullet_contents
-           ****************************/}
+          <div className="project__column"></div>
+        </div>
+        {/* BEGINNING SECTION */}
+        <h4>English as a Second Language (ESL)</h4>
+        <div className="project__double-cols">
           <div className="project__column">
-            <h3>"Terminology"</h3>
-            <p>
-              "Full-stack web application for speed golfers to record stats,
-              manage friends, and access a feed mode"
-            </p>
             <ul>
-              <li>
-                "Implemented Google authentication for user login and used
-                accessibility standards to ensure compliance and improve app
-                usability"
-              </li>
-              <li>
-                "Designed and developed a badge system that depends on golfer's
-                stats to incentivize engagement and improve user retention"
-              </li>
-              <li>"data_point3"</li>
+              <li>Diverse primary languages</li>
+              <li>Supports large cities</li>
+              <li>Supports Pull-Out EL Models</li>
+              <li>No teacher fluency requirements</li>
+              <li className="no-bullets">(Colorin Colorado, 1993)</li>
             </ul>
           </div>
-        </div>
-        <div>
-          <p className="bold">"data_summary"</p>
-          <div className="project__stackWrapper">
-            {data.stack.map((item, index) => (
-              <p key={index}>{item}</p>
-            ))}
+
+          <div className="project__column">
+            <p>
+              English as a Second Language (ESL) accommodates EL students from
+              many first languages, which is more common in larger cities. The
+              Pull-out model (continue reading) is most common for these
+              students so they can learn English among their first language
+              peers. ESL teachers do not need to be fluent in each students'
+              primary language (Colorin Colorado, 1993).
+            </p>
           </div>
         </div>
-      </div>
+        {/* END SECTION */}
 
-      {/***********************************
-       * Buttons navigating to respective
-       * locations
-       ************************************/}
-      <div className="project__linksWrapper">
-        <ButtonSecondary
-          type={"button"}
-          content={"GitHub Repo"}
-          link={data.links.github}
-          ariaLabel={"GitHub Repo"}
-        />
-        <ButtonSecondary
-          type={"button"}
-          content={"Visit Website"}
-          ariaLabel={"Visit Website"}
-          link={data.links.live}
-        />
-        <ButtonSecondary
-          type={"button"}
-          content={"My Contributions"}
-          ariaLabel={"My Contributions"}
-          link={data.links.contributions}
-        />
+        {/* BEGINNING SECTION */}
+        <h4>Bilingual Education</h4>
+        <div className="project__double-cols">
+          <div className="project__column">
+            <ul>
+              <li>Requires bilingual teachers</li>
+              <li>Students grouped by primary language</li>
+              <li>Smaller cities</li>
+              <li>Early-Exit bilingual programs</li>
+              <li>Late-Exit programs</li>
+              <li>Two-way programs</li>
+              <li className="no-bullets">(Colorin Colorado, 1993)</li>
+            </ul>
+          </div>
+
+          <div className="project__column">
+            <p>
+              Bilingual education groups EL students among their primary
+              language speaking peers, requiring bilingual teachers in each
+              primary language. Bilingual education is best served in smaller
+              school districts where there is not a diverse representation of
+              primary languages (Colorin Colorado, 1993).
+            </p>
+            <p>
+              Early-exit bilingual programs are designed to quickly transition
+              EL students out of EL programs. Instruction begins mostly in the
+              primary language but quickly transitions into primarily English
+              (Colorin Colorado, 1993).
+            </p>
+            <p>
+              Late-exit bilingual programs continue throughout the students
+              elementary education while they require "40% or more of their
+              instruction in their first language (Colorin Colorado, 1993)
+            </p>
+            <p>
+              Two-way bilingual programs are classes that are split, with half
+              of the students are English-primary and half of them are ESL. In
+              these programs, instruction is provided in both languages and EL
+              students get exposure to English through their EL peers (Colorin
+              Colorado, 1993).
+            </p>
+          </div>
+        </div>
+        {/* END SECTION */}
+        {/* BEGINNING SECTION */}
+        <h4>Sheltered English Instruction</h4>
+        <div className="project__double-cols">
+          <div className="project__column">
+            <ul>
+              <li>No explicit English instruction</li>
+              <li>Teachers adjust for understanding</li>
+              <li>Visual aids</li>
+              <li>Core Content</li>
+              <li className="no-bullets">(Colorin Colorado, 1993)</li>
+            </ul>
+          </div>
+
+          <div className="project__column">
+            <p>
+              This program does not explicitely teach English. Teachers use
+              differentiated instruction practices to adjust instruction,
+              explanations, and conversations to include EL participation. These
+              programs rely on various aids, such as visuals and body language,
+              to draw connections between English and the primary language.
+              These programs have the benefit of focusing more on core content
+              (Colorin Colorado, 1993).
+            </p>
+          </div>
+        </div>
+        {/* END SECTION */}
+        {/* BEGINNING SECTION */}
+        <h4>Structured English Immersion (SEI)</h4>
+        <div className="project__double-cols">
+          <div className="project__column">
+            <ul>
+              <li>Split days</li>
+              <li>EL only grouping</li>
+              <li>EL and Non-EL grouping</li>
+              <li className="no-bullets">
+                (Arizona Department of Education, 2024)
+              </li>
+            </ul>
+          </div>
+
+          <div className="project__column">
+            <p>
+              These programs allocate time for targeted, integrated, and
+              mainstream instruction. Days are split so that EL students receive
+              targeted instruction and grouped among other EL students, receive
+              integrated instruction and are grouped with a mix of EL and non-EL
+              and are taught core concepts, and receieve mainstream classroom
+              exposure (Arizona Department of Education, 2024).
+            </p>
+          </div>
+        </div>
+        {/* END SECTION */}
       </div>
     </div>
   );
 };
 
-export default Project;
+export default Terminology;

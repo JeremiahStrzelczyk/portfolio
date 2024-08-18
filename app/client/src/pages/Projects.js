@@ -5,11 +5,6 @@
  * Data is retrieved from `ProjectData.js`
  */
 
-import Project from "./Project";
-
-import FourPrinciples from "./FourPrinciples";
-import SEIModel from "./SEIModels";
-
 import ss_jp_v1 from "../static/images/speedscore_1186x848_resized/speedscore_500.jpg";
 import ss_jp_v2 from "../static/images/speedscore_1186x848_resized/speedscore_900.jpg";
 import ss_jp_v3 from "../static/images/speedscore_1186x848_resized/speedscore_1186.jpg";
@@ -26,15 +21,10 @@ import fd_wp_v1 from "../static/images/featherdusters_1209x851_resized/featherdu
 import fd_wp_v2 from "../static/images/featherdusters_1209x851_resized/featherdusters_900.webp";
 import fd_wp_v3 from "../static/images/featherdusters_1209x851_resized/featherdusters_1209.webp";
 
-import {
-  SpeedScore,
-  P2_Overview,
-  P2_StudentAgency,
-  P2_FourPrinciples,
-  P2_SEIModels,
-  P3,
-} from "./ProjectData";
+import { SpeedScore, P2_Overview, P3, P1 } from "./ProjectData";
 import AssessmentAndPlacement from "./AssessmentAndPlacement";
+import Terminology from "./Terminology";
+import PartTwo from "./PartTwo";
 
 const Projects = () => {
   const image_speedscore = (
@@ -71,15 +61,15 @@ const Projects = () => {
   return (
     <section tabIndex="0" id="projects">
       <header>
-        <h2>Key Aspects of Arizona's Approach</h2>
+        <h2>Terminology</h2>
       </header>
 
       {/**************
-       * SPEEDSCORE
+       * Part 1 Terminology
        **************/}
-      <div style={SpeedScore.styles} className="project__container">
+      <div style={P1.styles} className="project__container">
         {/* <Project data={SpeedScore} image={speedscore} /> */}
-        <Project data={SpeedScore} image={image_speedscore} />
+        <Terminology />
       </div>
 
       <header>
@@ -92,10 +82,11 @@ const Projects = () => {
         style={P2_Overview.styles}
         className="project__container featherdusters"
       >
-        <Project data={P2_Overview} image={image_featherdusters} />
-        <Project data={P2_StudentAgency} image={image_featherdusters} />
-        <FourPrinciples data={P2_FourPrinciples} image={image_featherdusters} />
-        <SEIModel />
+        {/* <Project data={P2_Overview} image={image_featherdusters} /> */}
+        {/* <Project data={P2_StudentAgency} image={image_featherdusters} /> */}
+        <PartTwo />
+        {/* <FourPrinciples data={P2_FourPrinciples} image={image_featherdusters} /> */}
+        {/* <SEIModel /> */}
       </div>
 
       <header>
