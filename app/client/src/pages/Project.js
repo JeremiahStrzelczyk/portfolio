@@ -14,49 +14,51 @@ const Project = ({ data, image }) => {
       {/* Encompasses all Project information except the buttons linking
         to repos */}
       <div className="project__content">
+        <h3>{data.title}</h3>
+        <p>{data.overview && data.overview}</p>
         <div className="project__double-cols">
           {/********************
            * IMAGE/GIF
            *********************/}
           <div className="project__column">
-            {/* <img
-              className="project__img"
-              src={image}
-              width={data.image.width}
-              height={data.image.height}
-              alt={data.image.alt}
-            /> */}
-            {image}
+            <ul>
+              {data.bullets &&
+                data.bullets.map((bullet, index) => (
+                  <li key={index}>{bullet}</li>
+                ))}
+            </ul>
           </div>
 
           {/****************************
-           * Title, summary, bullets
+           * Title, summary, bullet_contents
            ****************************/}
           <div className="project__column">
-            <h3>{data.title}</h3>
-            <p>{data.abstract}</p>
-            <ul>
-              <li>{data.point1}</li>
-              <li>{data.point2}</li>
-              <li>{data.point3}</li>
-            </ul>
+            {/* Some slides might not contain bullet_contents, so we must check
+             * that it's empty first */}
+            {/* <ul>
+              {data.bullet_contents &&
+                data.bullet_contents.map((bullet_content, index) => (
+                  <li key={index}>{bullet_content}</li>
+                ))}
+            </ul> */}
+            <p>{data.presenter_notes}</p>
           </div>
         </div>
-        <div>
+        {/* <div>
           <p className="bold">{data.summary}</p>
           <div className="project__stackWrapper">
             {data.stack.map((item, index) => (
               <p key={index}>{item}</p>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/***********************************
        * Buttons navigating to respective
        * locations
        ************************************/}
-      <div className="project__linksWrapper">
+      {/* <div className="project__linksWrapper">
         <ButtonSecondary
           type={"button"}
           content={"GitHub Repo"}
@@ -75,7 +77,7 @@ const Project = ({ data, image }) => {
           ariaLabel={"My Contributions"}
           link={data.links.contributions}
         />
-      </div>
+      </div> */}
     </div>
   );
 };

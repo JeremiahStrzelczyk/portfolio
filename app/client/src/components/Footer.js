@@ -1,4 +1,5 @@
-import { GitHub, Phone, Email, LinkedIn, StackOverflow, React } from "./Icons";
+import { React } from "./Icons";
+// import { GitHub, Phone, Email, LinkedIn, StackOverflow, React } from "./Icons";
 
 import Logo from "./Logo";
 
@@ -13,16 +14,6 @@ const Footer = () => {
          * Phone
          * Email
          ********** */}
-        <div className="footer__links-container">
-          <a href="tel:5097607707">
-            <Phone />
-            509-760-7707
-          </a>
-          <a href="mailto:jeremiahss@hotmail.com">
-            <Email />
-            Jeremiahss@Hotmail.com
-          </a>
-        </div>
       </div>
 
       {/**********************
@@ -32,29 +23,6 @@ const Footer = () => {
         {/*********************
          * Social Media Links
          *********************/}
-        <div className="footer__links-container">
-          <a
-            href="https://github.com/JeremiahStrzelczyk"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <GitHub />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/jeremiah-strzelczyk/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <LinkedIn />
-          </a>
-          <a
-            href="https://stackoverflow.com/users/12248602/jeremiah-s"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <StackOverflow />
-          </a>
-        </div>
 
         {/************
          * Copyright

@@ -1,4 +1,4 @@
-import { GitHub, LinkedIn, StackOverflow } from "./Icons";
+// import { GitHub, LinkedIn, StackOverflow } from "./Icons";
 import Logo from "./Logo";
 
 const Navbar = () => {
@@ -13,17 +13,12 @@ const Navbar = () => {
           <a href="/" aria-label="Home page">
             <Logo id={"navbar"} />
           </a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact" smoothscroll="true">
-            Contact
-          </a>
         </div>
 
         {/**************************************
          * Social media links
          **************************************/}
-        <div className="nav__links-container">
+        {/* <div className="nav__links-container">
           <a
             href="https://github.com/JeremiahStrzelczyk"
             target="_blank"
@@ -45,7 +40,7 @@ const Navbar = () => {
           >
             <StackOverflow />
           </a>
-        </div>
+        </div> */}
       </div>
     </nav>
   );
