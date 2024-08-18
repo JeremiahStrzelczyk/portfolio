@@ -432,6 +432,13 @@ footer {
   color: var(--light-color);
 }
 
+.text-aligned-left {
+  text-align: left;
+}
+
+.text-aligned-center {
+  text-align: center;
+}
 .project__column {
   flex-grow: 1;
   flex-basis: 0;
@@ -499,4 +506,33 @@ footer {
 
 .no-bullets {
   list-style-type: none;
+}
+
+/* || REFERENCES || */
+/* Make the reference text aligned properly */
+.reference-p {
+  text-indent: -0.5in;
+  margin-left: 0.5in;
+  line-height: 1.5;
+  word-wrap: break-word; /* Allows the text to wrap if necessary */
+  white-space: normal; /* Prevents unnecessary breaks */
+}
+
+.reference-h1 {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+
+.reference-div {
+  margin-top: 20px;
+  text-align: left;
+}
+
+/* Ensure links stay inline and inherit indentation */
+.reference-a {
+  display: inline; /* Ensure the link stays inline */
+  text-decoration: none;
+  word-wrap: break-word;
+  color: inherit;
 }
