@@ -1,8 +1,11 @@
 // Basic service worker with cache cleanup
 
+const CACHE_NAME = "v1";
+
 // Install event - No cache management
 self.addEventListener("install", (event) => {
-  console.log("Service worker installed");
+  self.skipWaiting(); // Forces the waiting service worker to become the active service worker
+  console.log("Service worker installed and skipWaiting called");
 });
 
 // Fetch event - Default network request handling
@@ -10,20 +13,21 @@ self.addEventListener("fetch", (event) => {
   event.respondWith(fetch(event.request));
 });
 
-// Activate event - Clear all existing caches
+// Activate event - Clear all existing caches and immediately take control
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches
       .keys()
       .then((cacheNames) => {
         return Promise.all(
-          cacheNames.map((cacheName) => {
-            return caches.delete(cacheName);
-          })
+          cacheNames.map((cacheName) => caches.delete(cacheName))
         );
       })
       .then(() => {
-        console.log("Old caches cleared");
+        return self.clients.claim(); // Immediately take control of all clients (open pages)
+      })
+      .then(() => {
+        console.log("Old caches cleared and new service worker activated");
       })
   );
 });
