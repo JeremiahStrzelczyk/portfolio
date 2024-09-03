@@ -29,7 +29,7 @@ const Newsletter = () => {
         </figcaption>
       </figure>
 
-      <h1 className="newsletter-h1">Dear Families,</h1>
+      <h1 className="newsletter-h1">TTTTT TTTTT TTTT Dear Families,</h1>
       <p>
         Welcome to our classroom! As we work together in support of your child's
         education, it is vital that you understand how we will assess your
