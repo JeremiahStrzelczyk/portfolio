@@ -14,3 +14,15 @@ convert featherdusters_1209x851.png -resize 500x900 -quality 65 featherdusters_5
 convert featherdusters_1209x851.png -resize 900x1000 -quality 65 featherdusters_900.webp
 convert featherdusters_1209x851.png -quality 65 featherdusters_1209.webp
 
+
+
+
+
+convert classroom_welcome.jpg -quality 65 classroom_welcome.webp
+convert communication.jpg -quality 65 communication.webp
+convert diagnostic_assessment.jpg -quality 65 diagnostic_assessment.webp
+convert formative_assessment.jpg -quality 65 formative_assessment.webp
+convert instruction_guidance.jpg -quality 65 instruction_guidance.webp
+convert self_reflection.jpg -quality 65 self_reflection.webp
+convert state_assessment.jpg -quality 65 state_assessment.webp
+convert summative_assessment.jpg -quality 65 summative_assessment.webp

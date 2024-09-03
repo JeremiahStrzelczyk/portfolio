@@ -1,4 +1,4 @@
-const CACHE_NAME = "jeremiah-strzelczyk-presentation-v5"; // Increment this version with each deployment
+const CACHE_NAME = "jeremiah-strzelczyk-newsletter-v3"; // Increment this version with each deployment
 const urlsToCache = [
   "/",
   "/manifest.json",

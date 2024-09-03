@@ -25,7 +25,7 @@
   );
 
   --dark-color: #161a16;
-  --light-color: whitesmoke;
+  --light-color: rgb(134, 129, 129);
   --dark-75: rgba(22, 26, 22, 0.75);
   --dark-50: rgba(22, 26, 22, 0.5);
   --dark-25: rgba(22, 26, 22, 0.25);
@@ -535,4 +535,129 @@ footer {
   text-decoration: none;
   word-wrap: break-word;
   color: inherit;
+}
+
+/* || NEWSLETTER || */
+.newsletter-div-body {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  line-height: 1.6;
+  color: #333;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #125b9a;
+  border-radius: 15px;
+  background: linear-gradient(to bottom, #ffbe98, #f05a7e);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-h1 {
+  color: #125b9a;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #ffbe98;
+}
+
+.newsletter-h2 {
+  color: #0b8494;
+  font-size: 26px;
+  margin-top: 30px;
+  border-bottom: 2px solid #f05a7e;
+  padding-bottom: 10px;
+}
+
+.newsletter-h3 {
+  color: #125b9a;
+  font-size: 22px;
+  margin-top: 20px;
+  border-left: 4px solid #0b8494;
+  padding-left: 10px;
+}
+
+.newsletter-ul {
+  margin-left: 20px;
+  margin-top: 10px;
+  padding-left: 20px;
+  border-left: 4px dashed #125b9a;
+}
+
+.newsletter-li {
+  margin-bottom: 10px;
+  color: #125b9a;
+  font-size: 18px;
+  line-height: 1.5;
+  padding-left: 5px;
+  position: relative;
+}
+
+.newsletter-li:before {
+  content: "⭐";
+  color: #f05a7e;
+  font-size: 18px;
+  position: absolute;
+  left: -20px;
+  top: 0;
+}
+
+.newsletter-p {
+  margin-top: 40px;
+  text-align: center;
+  font-style: italic;
+  color: #125b9a;
+}
+
+/* New styles for images with flexbox layout */
+.newsletter-section {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.newsletter-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.newsletter-section-image {
+  max-width: 45%;
+  margin-right: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-section.reverse .newsletter-section-image {
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+.newsletter-section-content {
+  max-width: 55%;
+}
+
+.newsletter-header-image {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-section-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.newsletter-section-image {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-photo-credit {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+  text-align: center;
 }

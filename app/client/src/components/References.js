@@ -12,83 +12,43 @@ const References = () => {
       >
         <h1 className="reference-h1">References</h1>
         <div className="reference-div">
+          {/* BEGIN SINGLE REFERENCES */}
           <p className="reference-p">
-            Arizona Department of Education. (n.d.).{" "}
-            <em>Arizona’s language development approach</em>.{" "}
+            Brown, R., & Harris, J. (2023, March 15).{" "}
+            <em>
+              The importance of using diagnostic assessment: 4 TIPS for
+              identifying learner needs
+            </em>
+            .{" "}
             <a
-              href="https://www.azed.gov/sites/default/files/2020/01/Arizona%27s%20Language%20Development%20Approach_December%20State%20Board%20Meeting_2019_rev2-25.pdf?id=5e149c9e03e2b32094fa7b5c"
+              href="https://www.renaissance.com/2021/05/20/blog-the-importance-of-using-diagnostic-assessment-4-tips-for-identifying-learner-needs/"
               target="_blank"
               rel="noopener noreferrer"
               className="reference-a"
             >
-              https://www.azed.gov/sites/default/files/2020/01/Arizona%27s%20Language%20Development%20Approach_December%20State%20Board%20Meeting_2019_rev2-25.pdf?id=5e149c9e03e2b32094fa7b5c
+              https://www.renaissance.com/2021/05/20/blog-the-importance-of-using-diagnostic-assessment-4-tips-for-identifying-learner-needs/
             </a>
           </p>
 
           <p className="reference-p">
-            Arizona Department of Education. (2019).{" "}
-            <em>AZELLA accommodations manual</em>.{" "}
+            <em>Formative and summative assessments</em>. Poorvu Center for
+            Teaching and Learning. (2021, June 30).{" "}
             <a
-              href="https://www.azed.gov/sites/default/files/2023/10/2023%20AZELLA%20Accommodations%20Manual.pdf"
+              href="https://poorvucenter.yale.edu/Formative-Summative-Assessments"
               target="_blank"
               rel="noopener noreferrer"
               className="reference-a"
             >
-              https://www.azed.gov/sites/default/files/2023/10/2023%20AZELLA%20Accommodations%20Manual.pdf
+              https://poorvucenter.yale.edu/Formative-Summative-Assessments
             </a>
+          </p>
+          <p className="reference-p">
+            Rankin, B. B., & Casey, R. (2022). Goals, Growth, and Grades:
+            Student Ownership of Learning through Reflection.{" "}
+            <em>NECTFL Review, 89</em>, 57–64.
           </p>
 
-          <p className="reference-p">
-            Arizona Department of Education. (2024).{" "}
-            <em>SEI model implementation guide 2023-2024</em>.{" "}
-            <a
-              href="https://www.azed.gov/sites/default/files/2023/05/SEI_ModelImplementationGuide2023-2024FINAL.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="reference-a"
-            >
-              https://www.azed.gov/sites/default/files/2023/05/SEI_ModelImplementationGuide2023-2024FINAL.pdf
-            </a>
-          </p>
-
-          <p className="reference-p">
-            Arizona State Legislature. (2024). <em>Arizona revised statutes</em>
-            .
-            <a
-              href="https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/15/00751.htm"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="reference-a"
-            >
-              https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/15/00751.htm
-            </a>
-          </p>
-
-          <p className="reference-p">
-            Colorin Colorado. (1993).{" "}
-            <em>Program models for teaching English language learners</em>.{" "}
-            <a
-              href="https://www.colorincolorado.org/article/program-models-teaching-english-language-learners"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="reference-a"
-            >
-              https://www.colorincolorado.org/article/program-models-teaching-english-language-learners
-            </a>
-          </p>
-
-          <p className="reference-p">
-            Office of English Language Acquisition Services. (n.d.).{" "}
-            <em>Arizona English learner determination and services</em>.{" "}
-            <a
-              href="https://www.azed.gov/sites/default/files/2023/05/EL_DeterminationAndServices-EL_ProgramsFlow-Chart_Updated2023.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="reference-a"
-            >
-              https://www.azed.gov/sites/default/files/2023/05/EL_DeterminationAndServices-EL_ProgramsFlow-Chart_Updated2023.pdf
-            </a>
-          </p>
+          {/* END SINGLE REFERENCES */}
         </div>
       </div>
     </section>
@@ -96,130 +56,3 @@ const References = () => {
 };
 
 export default References;
-
-// import React from "react";
-
-// const References = {" " () => {
-//   return (
-//     <section className="text-aligned-left">
-//       <div style={{ fontFamily: "Arial, sans-serif", lineHeight: "1.5" }}>
-//         <h1
-//           style={{ textAlign: "center", fontWeight: "bold", fontSize: "24px" }}
-//         >
-//           References
-//         </h1>
-//         <div style={{ marginTop: "20px" }}>
-//           <p
-//             style={{
-//               textIndent: "-0.5in",
-//               marginLeft: "0.5in",
-//               whiteSpace: "normal",
-//             }}
-//           >
-//             Arizona Department of Education. (n.d.). {" "}
-//             <em>Arizona’s language development approach</em>. {" "}
-//             <a
-//               href="https://www.azed.gov/sites/default/files/2020/01/Arizona%27s%20Language%20Development%20Approach_December%20State%20Board%20Meeting_2019_rev2-25.pdf?id=5e149c9e03e2b32094fa7b5c"
-//               target="_blank"
-//               rel="noopener noreferrer"
-//             >
-//               https://www.azed.gov/sites/default/files/2020/01/Arizona%27s%20Language%20Development%20Approach_December%20State%20Board%20Meeting_2019_rev2-25.pdf?id=5e149c9e03e2b32094fa7b5c
-//             </a>
-//           </p>
-
-//           <p
-//             style={{
-//               textIndent: "-0.5in",
-//               marginLeft: "0.5in",
-//               whiteSpace: "normal",
-//             }}
-//           >
-//             Arizona Department of Education. (2019).
-//             <em>AZELLA accommodations manual</em>. {" "}
-//             <a
-//               href="https://www.azed.gov/sites/default/files/2023/10/2023%20AZELLA%20Accommodations%20Manual.pdf"
-//               target="_blank"
-//               rel="noopener noreferrer"
-//             >
-//               https://www.azed.gov/sites/default/files/2023/10/2023%20AZELLA%20Accommodations%20Manual.pdf
-//             </a>
-//           </p>
-
-//           <p
-//             style={{
-//               textIndent: "-0.5in",
-//               marginLeft: "0.5in",
-//               whiteSpace: "normal",
-//             }}
-//           >
-//             Arizona Department of Education. (2024).
-//             <em>SEI model implementation guide 2023-2024</em>. {" "}
-//             <a
-//               href="https://www.azed.gov/sites/default/files/2023/05/SEI_ModelImplementationGuide2023-2024FINAL.pdf"
-//               target="_blank"
-//               rel="noopener noreferrer"
-//             >
-//               https://www.azed.gov/sites/default/files/2023/05/SEI_ModelImplementationGuide2023-2024FINAL.pdf
-//             </a>
-//           </p>
-
-//           <p
-//             style={{
-//               textIndent: "-0.5in",
-//               marginLeft: "0.5in",
-//               whiteSpace: "normal",
-//             }}
-//           >
-//             Arizona State Legislature. (2024). <em>Arizona revised statutes</em>
-//             .
-//             <a
-//               href="https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/15/00751.htm"
-//               target="_blank"
-//               rel="noopener noreferrer"
-//             >
-//               https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/15/00751.htm
-//             </a>
-//           </p>
-
-//           <p
-//             style={{
-//               textIndent: "-0.5in",
-//               marginLeft: "0.5in",
-//               whiteSpace: "normal",
-//             }}
-//           >
-//             Colorin Colorado. (1993).
-//             <em>Program models for teaching English language learners</em>. {" "}
-//             <a
-//               href="https://www.colorincolorado.org/article/program-models-teaching-english-language-learners"
-//               target="_blank"
-//               rel="noopener noreferrer"
-//             >
-//               https://www.colorincolorado.org/article/program-models-teaching-english-language-learners
-//             </a>
-//           </p>
-
-//           <p
-//             style={{
-//               textIndent: "-0.5in",
-//               marginLeft: "0.5in",
-//               whiteSpace: "normal",
-//             }}
-//           >
-//             Office of English Language Acquisition Services. (n.d.).
-//             <em>Arizona English learner determination and services</em>. {" "}
-//             <a
-//               href="https://www.azed.gov/sites/default/files/2023/05/EL_DeterminationAndServices-EL_ProgramsFlow-Chart_Updated2023.pdf"
-//               target="_blank"
-//               rel="noopener noreferrer"
-//             >
-//               https://www.azed.gov/sites/default/files/2023/05/EL_DeterminationAndServices-EL_ProgramsFlow-Chart_Updated2023.pdf
-//             </a>
-//           </p>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default References;

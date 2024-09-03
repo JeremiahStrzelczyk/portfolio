@@ -1,8 +1,10 @@
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import References from "./components/References";
-import Hero from "./pages/Hero";
-import Projects from "./pages/Projects";
+// import References from "./components/References";
+// import Hero from "./pages/Hero";
+import Newsletter from "./pages/Newsletter";
+// import Projects from "./pages/Projects";
 
 function App() {
   return (
@@ -13,8 +15,8 @@ function App() {
 
       <Navbar />
       <main id="main-content">
-        <Hero />
-        <Projects />
+        {/* <Hero /> */}
+        <Newsletter />
         <References />
       </main>
       <Footer />
