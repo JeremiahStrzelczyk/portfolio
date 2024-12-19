@@ -479,3 +479,60 @@ main {
   word-wrap: break-word;
   color: lightblue;
 }
+
+/* Scroll Animation */
+/* Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 12%; /* Adjust for visibility */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 10;
+}
+
+.arrow-down {
+  display: inline-block;
+  width: 0; /* Arrow uses border-based design */
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 40px solid #0073e6; /* Adjusted for double size */
+  animation: bounce-scale 2s infinite, gradient-flash 3s infinite;
+  filter: drop-shadow(0 0 10px rgba(0, 115, 230, 0.8)); /* Glow effect */
+}
+/* Bounce and Scale Animation */
+@keyframes bounce-scale {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.2); /* Add scaling */
+  }
+}
+
+/* Gradient Flash Animation */
+@keyframes gradient-flash {
+  0% {
+    border-top-color: #0073e6;
+    filter: drop-shadow(0 0 10px rgba(0, 115, 230, 0.8));
+  }
+  25% {
+    border-top-color: #ff4081;
+    filter: drop-shadow(0 0 10px rgba(255, 64, 129, 0.8));
+  }
+  50% {
+    border-top-color: #4caf50;
+    filter: drop-shadow(0 0 10px rgba(76, 175, 80, 0.8));
+  }
+  75% {
+    border-top-color: #ff9800;
+    filter: drop-shadow(0 0 10px rgba(255, 152, 0, 0.8));
+  }
+  100% {
+    border-top-color: #0073e6;
+    filter: drop-shadow(0 0 10px rgba(0, 115, 230, 0.8));
+  }
+}

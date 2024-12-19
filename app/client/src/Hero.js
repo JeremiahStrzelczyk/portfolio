@@ -13,6 +13,9 @@ function Hero() {
           <h2>Jeremiah Strzelczyk</h2>
         </div>
       </div>
+      <div className="scroll-indicator">
+        <span className="arrow-down"></span>
+      </div>
     </div>
   );
 }
