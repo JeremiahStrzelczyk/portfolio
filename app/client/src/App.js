@@ -8,6 +8,7 @@ import PresentationDetails from "./PresentationDetails";
 import Hero from "./Hero";
 import Tools from "./Tools";
 import TechnologyGuidelines from "./TechnologyGuidelines";
+import References from "./References";
 function App() {
   return (
     <div>
@@ -21,6 +22,7 @@ function App() {
         <TechnologyGuidelines />
         <Tools />
       </main>
+      <References />
       <footer>
         <p>&copy; 2024 5th Grade Classroom Living Museum Project</p>
       </footer>

@@ -34,6 +34,7 @@ function TechnologyGuidelines() {
             government sites (.gov), and trusted organizations (.org). Avoid
             unreliable or biased sources like personal blogs or forums.
           </p>
+          <p>(PBS NewsHour Classroom, 2023)</p>
         </div>
         <div className="card">
           <h3>🌍 Extended Learning</h3>
@@ -49,6 +50,7 @@ function TechnologyGuidelines() {
             sources, and avoiding plagiarism. Ensure your work reflects your
             creativity and effort.
           </p>
+          <p>(SWGfL, n.d.)</p>
         </div>
         <div className="card">
           <h3>🎨 Enhancing Exhibits</h3>
