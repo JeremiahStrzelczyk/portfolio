@@ -1,26 +1,30 @@
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import Contact from "./pages/Contact";
-import Hero from "./pages/Hero";
-import Projects from "./pages/Projects";
-import Skills from "./pages/Skills";
-
+import React from "react";
+import "./index.css";
+import Standards from "./Standards";
+import Timeline from "./Timeline";
+import Presentation from "./Presentation";
+import StudentExpectations from "./StudentExpectations";
+import PresentationDetails from "./PresentationDetails";
+import Hero from "./Hero";
+import Tools from "./Tools";
+import TechnologyGuidelines from "./TechnologyGuidelines";
 function App() {
   return (
-    <>
-      <a href="#main-content" className="skip-link">
-        Skip to main content
-      </a>
-
-      <Navbar />
-      <main id="main-content">
-        <Hero />
-        <Skills />
-        <Projects />
-        <Contact />
+    <div>
+      <Hero />
+      <main>
+        <Standards />
+        <Timeline />
+        <Presentation />
+        <StudentExpectations />
+        <PresentationDetails />
+        <TechnologyGuidelines />
+        <Tools />
       </main>
-      <Footer />
-    </>
+      <footer>
+        <p>&copy; 2024 5th Grade Classroom Living Museum Project</p>
+      </footer>
+    </div>
   );
 }
 

@@ -1,545 +1,446 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
-* {
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(to bottom, #f9f9f9, #e3f2fd);
 }
 
-/* || VARIABLES */
-:root {
-  /* COLORS */
-
-  --primary-color: blue;
-  --secondary-color: purple;
-  --blend-color: linear-gradient(
-    270deg,
-    var(--primary-color) 0%,
-    var(--secondary-color) 100%
-  );
-  --blend-color-reverse: linear-gradient(
-    270deg,
-    var(--secondary-color) 0%,
-    var(--primary-color) 100%
-  );
-
-  --dark-color: #161a16;
-  --light-color: whitesmoke;
-  --dark-75: rgba(22, 26, 22, 0.75);
-  --dark-50: rgba(22, 26, 22, 0.5);
-  --dark-25: rgba(22, 26, 22, 0.25);
-  --dark-10: rgba(22, 26, 22, 0.1);
-  --dark-5: rgba(22, 26, 22, 0.05);
-  --error: #fa2f17;
-  --success: #0cf70c;
-
-  /* TYPOGRAPHY */
-  --ff-h: "Roboto, Arial";
-  --ff-p: "Nunito, sans-serif";
-
-  /* Sizes derived from typescale.com using 1.250 as the smallest and 
-     1.414 as the largest scales respectively*/
-  --p: clamp(18px, calc(1.16666 * 1vw), 21px);
-  --h1: clamp(55px, calc(6.61111 * 1vw), 119px);
-  --h2: clamp(44px, calc(4.46666 * 1vw), 84px);
-  --h3: clamp(36px, calc(3.33333 * 1vw), 60px);
-  --h4: clamp(29px, calc(2.33333 * 1vw), 42px);
-  --h5: clamp(23px, calc(1.66666 * 1vw), 30px);
-  --h6: clamp(18px, calc(1.16666 * 1vw), 21px);
-
-  /* PADDING/MARGINS */
-  --px8: calc(0.44444 * 1vw); /* 8px @ 1800 --> 8 / 1800 * 100 = 0.444 */
-  --px16: calc(0.88888 * 1vw); /* 16px @ 1800 --> 16 / 1800 * 100 = 0.888 */
-  --px24: calc(1.33333 * 1vw); /* 24px @ 1800 --> 24 / 1800 * 100 = 1.333 */
-  --px32: calc(1.77777 * 1vw); /* 32px @ 1800 --> 32 / 1800 * 100 = 1.777 */
-  --px48: calc(2.66666 * 1vw); /* 48px @ 1800 --> 48 / 1800 * 100 = 2.666 */
-  --px64: calc(3.55555 * 1vw); /* 64px @ 1800 --> 64 / 1800 * 100 = 3.555 */
-  --px96: calc(5.33333 * 1vw); /* 96px @ 1800 --> 96 / 1800 * 100 = 3.555 */
-  --px128: calc(7.11111 * 1vw); /* 128px @ 1800 -->  128 / 1800 * 100 = 7.111 */
-  --px256: calc(14.22222 * 1vw);
-  --px384: calc(21.33333 * 1vw); /* Hero section */
-  --px512: calc(28.44444 * 1vw);
-
-  /* LINE HEIGHTS */
-  --px139: calc(7.72222 * 1vw);
+/* Header */
+header {
+  background: linear-gradient(135deg, #0073e6, #0056b3);
+  color: #fff;
+  text-align: center;
+  padding: 2em 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* || GENERAL STYLES */
-
-body {
-  background-color: var(--light-color);
+header h1 {
+  margin: 0;
+  font-size: 2.8em;
+  letter-spacing: 2px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin-bottom: var(--px32);
+header p {
+  margin: 0.5em 0 0;
+  font-size: 1.3em;
+  font-style: italic;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--ff-h);
-  font-style: normal;
-  line-height: 1.3;
-
-  color: var(--dark-color);
+/* Main Section */
+main {
+  padding: 2em 10%;
 }
 
-h1 {
-  font-weight: 700;
-  font-size: var(--h1);
+main section {
+  margin-bottom: 2em;
+  padding: 2em;
+  background: #fff;
+  border-radius: 10px;
+  border-left: 6px solid #0073e6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.6s ease;
 }
 
-h2 {
-  font-weight: 700;
-  font-size: var(--h2);
+main section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-h3 {
-  font-weight: 300;
-  font-size: var(--h3);
+main section h2 {
+  margin-top: 0;
+  color: #0056b3;
+  font-size: 2em;
+  border-bottom: 2px solid #e3f2fd;
+  padding-bottom: 0.5em;
 }
 
-h4 {
-  font-weight: 700;
-  font-size: var(--h4);
+main section h3 {
+  font-size: 1.5em;
+  color: #0073e6;
+  margin-top: 1.5em;
 }
 
-h5 {
-  font-weight: 700;
-  font-size: var(--h5);
+main section ul,
+main section ol {
+  padding-left: 1.5em;
+  margin: 1em 0;
 }
 
-h6 {
-  font-weight: 700;
-  font-size: var(--h6);
+main section ul li,
+main section ol li {
+  margin-bottom: 1em;
+  line-height: 1.6;
 }
 
-p,
-ul,
-div,
-button {
-  font-family: var(--ff-p);
-  font-style: normal;
-  font-weight: 400;
-  font-size: var(--p);
-  line-height: 30px;
-  color: var(--dark-75);
+main section ul li strong,
+main section ol li strong {
+  color: #0073e6;
+  font-weight: bold;
 }
 
-/* Hacky solution: 
-  Problem: I wanted my bullets to line up with the text of the container. 
-           Using "inside" position created a new problem where the subsequent
-           lines would also line up with the text of the container rather than
-           indent as desired.
-  Source: https://stackoverflow.com/questions/10428720/how-to-keep-indent-for-second-line-in-ordered-lists-via-css#:~:text=I%20believe%20this%20will%20do%20what%20you%20are%20looking%20for */
-ul {
-  list-style-type: disc;
-  list-style-position: inside;
-  text-indent: -1em;
-  padding-left: 1em;
-}
-
+/* Buttons and Links */
+button,
 a {
   text-decoration: none;
-  color: inherit;
+  background: linear-gradient(90deg, #0073e6, #0056b3);
+  color: #fff;
+  padding: 0.8em 1.5em;
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
-img {
-  display: block; /* removes gap since images are inline by default */
-  /* Image responsiveness */
-  max-width: 100%; /* of parent */
-  height: auto;
+button:hover,
+a:hover {
+  background: linear-gradient(90deg, #0056b3, #003c82);
 }
 
-input,
-body,
-textarea,
-textarea {
-  font: inherit;
+/* Cards for Checkpoints */
+.checkpoint-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
 }
 
-/* || UTILITY CLASSES */
-.bold {
-  font-weight: 700;
-}
-.blend-bg {
-  background: var(--blend-color);
-}
-
-.blend-text {
-  background: var(--blend-color);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+.checkpoint-card {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  color: #fff;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.offscreen {
-  position: absolute;
-  left: -10000px;
+.checkpoint-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* || SKIP LINK */
-.skip-link {
-  position: absolute;
-  transform: translateX(-200%);
-  transition: transform 0.3s;
-  background-color: var(--dark-color);
-  color: var(--light-color);
+.checkpoint-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.8em;
+}
+
+.checkpoint-card h4 {
+  margin: 0 0 15px 0;
+  font-size: 1.3em;
+}
+
+.card-a {
+  background: linear-gradient(135deg, #ff4081, #ff80ab);
+}
+
+.card-b {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+}
+
+.card-c {
+  background: linear-gradient(135deg, #ff9800, #ffb74d);
+}
+
+.card-d {
+  background: linear-gradient(135deg, #2196f3, #64b5f6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .checkpoint-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Footer */
+footer {
   text-align: center;
-  font-size: var(--p);
-}
-
-.skip-link:focus {
-  position: static;
-  transform: translateX(0);
-}
-
-section {
-  padding: 0px var(--px128);
-  margin: 0px 0px var(--px256) 0px;
-  text-align: center;
-}
-
-a {
-  display: flex;
-  flex-direction: column;
-}
-
-/* || ICONS/SVG */
-.icons__skills {
-  height: var(--px64);
-  color: var(--dark-color);
-}
-
-.icons__icon {
-  height: 18px;
-  height: var(--px32);
-  height: clamp(18px, var(--px32), 100px);
-  /* color: var(--dark-color); */
-  color: inherit;
-  width: auto;
-}
-
-.icons__icon:hover {
-  color: var(--primary-color);
-}
-
-/* || LOGO */
-.logo {
-  height: var(--px64);
-  width: auto;
-}
-
-.logo__TopFill,
-.logo__BotFill {
-  fill: var(--primary-color);
-  stroke: var(--dark-color);
-}
-
-.logo__FNameOutline {
-  fill: var(--dark-color);
-}
-.logo__FNameFill {
-  fill: var(--dark-color);
-}
-.logo__LName {
-  fill: var(--primary-color);
-}
-
-/* When we hover over the logo, I want the colors to inverse */
-.logo:hover [class^="logo__"] {
-  fill: var(--dark-color);
-  stroke: var(--dark-color);
-}
-
-.logo:hover .logo__FNameFill,
-.logo:hover .logo__FNameOutline {
-  fill: var(--primary-color);
-  stroke: var(--primary-color);
-}
-/* || BUTTONS */
-button {
-  border: none;
-  width: 100%;
-}
-
-.button__link,
-button {
-  border-radius: 100px;
-  padding: var(--px24) var(--px48);
-  cursor: pointer;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: var(--px16);
-
-  font-weight: 700;
-  font-size: var(--h6);
-}
-
-.button__primary {
-  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07),
-    0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198),
-    0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275),
-    0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035),
-    0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725),
-    0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
-
-  color: var(--light-color);
-  background: var(--blend-color);
-}
-
-.button__primary:hover {
-  background: var(--blend-color-reverse);
-  gap: 24px;
-}
-
-.button__primary:active {
-  opacity: 60%;
-}
-
-.button__secondary {
-  color: var(--dark-color);
-  background-color: var(--light-color);
-  border: 2px solid var(--dark-color);
-}
-
-.button__secondary:hover {
-  color: var(--light-color);
-  background-color: var(--dark-color);
-}
-
-.button__secondary:active {
-  color: var(--light-color);
-  background-color: var(--dark-75);
-}
-
-/* || NAVBAR */
-nav {
-  border-bottom: 1px solid rgba(22, 26, 22, 0.1);
-  margin-bottom: var(--px128);
-}
-.nav__container {
-  display: flex;
-  justify-content: space-between;
-  padding: var(--px32) var(--px64);
-  align-items: center;
-}
-.nav__links-container {
-  display: flex;
-  gap: var(--px64);
-  align-items: center;
-  justify-content: center;
-  color: var(--dark-color);
-}
-
-nav a {
-  font-weight: 700;
-  font-size: var(--h6);
-  line-height: 25px;
-  text-decoration: none;
-  color: var(--dark-color);
-}
-
-nav a:hover {
-  color: var(--primary-color);
-}
-
-/* || FOOTER */
-.footer__container {
-  display: flex; /* Links || &cpy || Logo */
-  justify-content: space-between;
-  padding: var(--px32) var(--px64);
-  align-items: center;
-  border-top: 1px solid var(--dark-5);
-}
-
-.footer__links-container {
-  display: flex;
-  gap: var(--px64);
-
-  color: var(--dark-color);
-}
-
-/* Links have inherit by default, so we must target
-   them specificially here */
-.footer__links-container *:hover {
-  color: var(--primary-color);
+  padding: 1.5em 0;
+  background: #333;
+  color: #fff;
 }
 
 footer p {
-  margin-bottom: 0px; /* p has margin by default. Don't want it in footer  */
-  font-size: 15px;
+  margin: 0;
+  font-size: 0.9em;
 }
 
-footer {
-  border-top: 1px solid var(--dark-25);
-}
-
-@media screen and (max-width: 800px) {
-  .footer__container {
-    flex-direction: column;
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
-
-  .footer__links-container {
-    margin-bottom: 16px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-/* || HERO */
+
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero Section */
 .hero {
-  padding: 0px var(--px128); /* 128 section + 128 = 256 total padding */
-  /* display: flex;
-  flex-direction: column; */
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff9800, #ff6f61);
+  color: #fff;
   text-align: center;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 20px;
+  animation: fadeIn 1s ease;
+}
+
+.hero h1 {
+  font-size: 4em;
+  margin: 0 0 10px;
+  letter-spacing: 3px;
 }
 
 .hero p {
-  padding: 0px var(--px256); /* Shrinks the abstract to a more pleasing size */
+  font-size: 1.5em;
+  margin: 0 0 20px;
+  font-style: italic;
+  color: #e3f2fd;
 }
 
-.hero button {
-  margin-top: var(--px96); /* More separation between button and hero content */
-}
-
-@media screen and (max-width: 800px) {
-  .hero p {
-    padding: 0px 0px;
-  }
-}
-
-/* || SKILLS */
-.skills__icon-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.skills__icon-container * {
-  background-color: var(--dark-10);
+.hero-sub {
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: 2px solid #e3f2fd;
   border-radius: 10px;
-  padding: var(--px32);
+  display: inline-block;
 }
 
-/* || PROJECTS */
-.project__double-cols {
+.hero-sub h2 {
+  font-size: 2em;
+  margin: 0;
+  color: #fff;
+}
+
+/* Ensure content below Hero is not cut off */
+main {
+  padding-top: 100px;
+}
+
+.info-cards {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: var(--px32);
-  margin-bottom: var(--px32);
-  border-bottom: 1px solid var(--dark-25);
-}
-.project__container {
-  padding: var(--px64) var(--px128);
-  margin-bottom: var(--px128);
-}
-
-/* Want Title, Content, Summary, and Stack to have the light color */
-.project__content * {
-  color: var(--light-color);
-}
-
-.project__column {
-  flex-grow: 1;
-  flex-basis: 0;
-  text-align: left;
-  margin-right: 24px;
-}
-
-.project__stackWrapper {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  align-items: center;
+  gap: 20px;
   justify-content: center;
+  padding: 20px;
 }
 
-.project__linksWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: var(--px16);
+.card {
+  flex: 1 1 calc(25% - 40px); /* Adjust size dynamically for responsiveness */
+  /* background: linear-gradient(135deg, #0073e6, #0056b3); */
+
+  background: linear-gradient(
+    135deg,
+    #e3f2fd,
+    #bbdefb
+  ); /* Softer background gradient */
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#projects {
+.card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.card p {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%;
+  }
+}
+
+.card {
+  flex: 1 1 calc(25% - 40px); /* Adjust size dynamically for responsiveness */
+  background: linear-gradient(
+    135deg,
+    #e3f2fd,
+    #bbdefb
+  ); /* Softer background gradient */
+  color: #333; /* Ensures text color contrasts well */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #0073e6; /* Vibrant color for better contrast */
+}
+
+.card p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #333; /* Matches card text color */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-section {
+  background: #f9f9f9;
+  padding: 40px 20px;
+}
+
+.timeline {
+  position: relative;
+  margin: 20px auto;
   padding: 0;
+  max-width: 800px;
+  list-style: none;
 }
 
-@media screen and (max-width: 1000px) {
-  .project__double-cols {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .project__linksWrapper {
-    /* justify-content: space-between; */
-    display: block;
-  }
-}
-
-/* || CONTACT */
-input,
-textarea {
-  margin-bottom: 32px;
-  resize: vertical;
-}
-
-.contact__NameEmail {
+.timeline-item {
   display: flex;
-  gap: 8px;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
 }
 
-.contact__input {
-  flex: 1 1;
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background: #0073e6;
+  color: white;
+  border-radius: 50%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-right: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.form__input {
-  background-color: var(--dark-10);
-  border: none;
-  border-radius: 8px;
-  padding: var(--px24) var(--px16);
-}
-
-.form__input--error {
-  border: 3px solid var(--error);
-}
-
-.form__input--success {
-  border: 3px solid var(--success);
-}
-
-@media screen and (max-width: 900px) {
-  .contact__stackColumns {
-    flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .contact__NameEmail {
-    display: block;
-  }
-}
-
-.column {
+.timeline-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 6px solid #0073e6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex-grow: 1;
-  flex-basis: 0;
-  text-align: left;
 }
 
-.even-columns {
-  display: flex;
-  gap: 24px;
+.timeline-content h3 {
+  margin: 0 0 10px;
+  font-size: 1.5em;
+  color: #0056b3;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline-icon {
+    margin-bottom: 10px;
+  }
+}
+.tools-section {
+  background: #f9f9f9;
+  padding: 40px 20px;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.tool-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-card img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.tool-card h3 {
+  font-size: 1.4em;
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+.tool-card p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #333;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
 }
