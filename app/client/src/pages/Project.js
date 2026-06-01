@@ -63,12 +63,12 @@ const Project = ({ data, image }) => {
           link={data.links.github}
           ariaLabel={"GitHub Repo"}
         />
-        <ButtonSecondary
+        {/* <ButtonSecondary
           type={"button"}
           content={"Visit Website"}
           ariaLabel={"Visit Website"}
           link={data.links.live}
-        />
+        /> */}
         <ButtonSecondary
           type={"button"}
           content={"My Contributions"}

@@ -13,7 +13,7 @@ const SpeedScore = {
   point3:
     "Collaborated with a team of developers to ensure code quality, maintainability, and scalability",
   summary:
-    "Overall, SpeedScore is a showcase of my technical skills in full-stack web development and my ability to collaborate with a team towards a common goal.",
+    "SpeedScore demonstrates my ability to build full-stack applications, explain technical systems, and connect programming concepts to real-world projects.",
   links: {
     github: "https://github.com/JeremiahStrzelczyk/speedscore",
     live: "https://speedscore.onrender.com/",
@@ -22,13 +22,13 @@ const SpeedScore = {
   },
 
   stack: [
-    "JavaScript,",
-    "HTML,",
-    "CSS,",
-    "Express.js,",
-    "Node.js,",
-    "MongoDB",
-    "React",
+    "JavaScript |",
+    "HTML |",
+    "CSS |",
+    "Express.js |",
+    "Node.js |",
+    "MongoDB |",
+    "React |",
     "Passport.js",
   ],
   image: {
@@ -57,7 +57,7 @@ const Featherdusters = {
     "Improved website performance through testing, debugging, and optimization",
 
   summary:
-    "Overall, this project showcases my skills in front-end development and collaboration, and highlights my ability to create effective digital solutions for businesses.",
+    "This project demonstrates my ability to gather requirements, build practical web solutions, and communicate technical ideas clearly with non-technical users.",
 
   links: {
     github:
@@ -66,7 +66,7 @@ const Featherdusters = {
     contributions:
       "https://github.com/JeremiahStrzelczyk/waterfowl-guiding-feather-dusters/commits/main",
   },
-  stack: ["JavaScript,", "HTML,", "CSS", "React,"],
+  stack: ["JavaScript |", "HTML |", "CSS |", "React"],
   image: {
     alt: "Featherdusters LLC",
     width: "1209",

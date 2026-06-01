@@ -6,12 +6,12 @@ const Hero = () => {
     <section tabIndex="0">
       <div className="hero">
         <h3 className="blend-text">Hey, I'm Jeremiah</h3>
-        <h1>Full Stack Web Developer</h1>
+        <h1>Educator | Web App Developer | Computer Scientist</h1>
         <p>
-          I have experience in web development and a passion for creating
-          innovative solutions. With a focus on user experience and a commitment
-          to delivering high-quality results, I am dedicated to developing
-          efficient and user-friendly applications.
+          I am an educator with a background in computer science, web
+          development, and classroom instruction. I enjoy helping students build
+          problem-solving skills through programming, hands-on projects, and
+          real-world technology applications.
         </p>
         <div>
           <ButtonPrimary

@@ -44,10 +44,9 @@ const Contact = () => {
         <div className="column">
           <h3>Get in touch.</h3>
           <p>
-            Thank you for taking the time to review my portfolio. I am excited
-            about the opportunity to contribute my skills to a dynamic team as a
-            full stack developer. I am always open to collaborating on exciting
-            projects and exploring new opportunities.
+            I am excited about opportunities where I can combine computer
+            science, education, and real-world problem-solving to support
+            student learning and career readiness.
           </p>
         </div>
 

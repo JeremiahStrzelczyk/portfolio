@@ -13,7 +13,7 @@ const Navbar = () => {
           <a href="/" aria-label="Home page">
             <Logo id={"navbar"} />
           </a>
-          <a href="#skills">Skills</a>
+          <a href="#skills">Technical Skills</a>
           <a href="#projects">Projects</a>
           <a href="#contact" smoothscroll="true">
             Contact
@@ -38,13 +38,13 @@ const Navbar = () => {
           >
             <LinkedIn />
           </a>
-          <a
+          {/* <a
             href="https://stackoverflow.com/users/12248602/jeremiah-s"
             target="_blank"
             rel="noreferrer"
           >
             <StackOverflow />
-          </a>
+          </a> */}
         </div>
       </div>
     </nav>
