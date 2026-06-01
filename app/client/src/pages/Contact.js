@@ -21,7 +21,7 @@ const Contact = () => {
   const { name, email, content } = formState;
 
   const handleSubmit = (e) => {
-    alert("Test");
+    // alert("Test");
     e.preventDefault();
     fetch("/", {
       method: "POST",
